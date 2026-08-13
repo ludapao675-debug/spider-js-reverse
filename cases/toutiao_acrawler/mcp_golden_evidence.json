@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "generated_at": "2026-07-12T12:44:00Z",
+    "source": "MCP crypto-hunter-lite 真浏览器取证 (ch_cdp_start + ch_page_run_js)",
+    "browser_id": "f3b4473a-18f2-4bdb-9906-47cde8f5dbc0",
+    "tab_id": "6ADF49D3379F6717195E1BC8DCF0A671",
+    "profile": "chrome_profile_toutiao",
+    "note": "本文件为 MCP 标准工具链驱动真实 Chrome 生成的 acrawler _signature golden 样本与真机环境指纹，供本地模拟(replay_real.js)结构对照。"
+  },
+  "golden_signatures": [
+    {
+      "url": "https://www.toutiao.com/?wid=1783839624446",
+      "signature": "_02B4Z6wo00f01v4xIGgAAIDDc3FZ-aeHhLb-FUzAANXs772Voqh81K4e2hMBJCCyv74uPJxWkuNx6Y2ExThowpnuYOqoL4mncQ.BJLIZO79uexf7yc9EKUzMfiRVPiuDbspHKuVKGP1WJljm9d",
+      "note": "首页 URL，含恒定环境指纹段 + 尾部计数段"
+    },
+    {
+      "url": "https://www.toutiao.com/api/pc/feed/?category=news_hot&utm_source=toutiao&wid=1783839624446",
+      "signature": "_02B4Z6wo00f01h1SQbQAAIDDkBI4JEoFx9oddi0AAO0V772Voqh81K4e2hMBJCCyv74uPJxWkuNx6Y2ExThowpnuYOqoL4mncQ.BJLIZO79uexf7yc9EKUzMfiRVPiuDbspHKuVKGP1WJljm82",
+      "segs": 2,
+      "sig_len": 147,
+      "note": "feed URL，同步 sign() 返回，2 段结构"
+    },
+    {
+      "url": "https://www.toutiao.com/api/pc/feed/?category=news_hot&utm_source=toutiao&wid=1783839624446",
+      "signature": "_02B4Z6wo00f01YNLpmwAAIDADgvf.L8ZbOGDb8rAAAqC772Voqh81K4e2hMBJCCyv74uPJxWkuNx6Y2ExThowpnuYOqoL4mncQ",
+      "segs": 3,
+      "sig_len": 147,
+      "seg1": "_02B4Z6wo00f01YNLpmwAAIDADgvf",
+      "seg1_len": 29,
+      "seg2": "L8ZbOGDb8rAAAqC772Voqh81K4e2hMBJCCyv74uPJxWkuNx6Y2ExThowpnuYOqoL4mncQ",
+      "note": "feed URL，同一时间窗口内连续 3 次调用结果完全一致（确定性），证明时间戳量化到窗口粒度"
+    }
+  ],
+  "structure_analysis": {
+    "version_prefix": "_02B4Z6wo00f01",
+    "prefix_note": "固定版本标识，所有样本一致",
+    "constant_env_fingerprint_segment": "772Voqh81K4e2hMBJCCyv74uPJxWkuNx6Y2ExThowpnuYOqoL4mncQ",
+    "constant_note": "该 53 字符段在本机所有 URL、所有调用中恒定出现，由 canvas/webgl/audio 等硬件指纹派生，是本地离线复现的核心障碍（硬件指纹不可离线伪造）。",
+    "variable_segments": "版本前缀之后至指纹段之前的部分随 URL + 时间戳变化",
+    "layout": "_02B4Z6wo00f01 + [URL/时间派生段] + [.分隔] + [恒定环境指纹段] + [可选尾部计数段]"
+  },
+  "local_replay_comparison": {
+    "tool": "replay_real.js (Node vm 沙箱 + 浏览器垫片)",
+    "local_signature": "_02B4Z6wo00f01SCtxRgAAIDDkQjupfMVVSEgj8GAACJ7c6",
+    "local_sig_len": 47,
+    "local_segs": 1,
+    "local_bytelog_len": 29026,
+    "verdict": "本地垫片被 acrawler 环境完整性检测判定为非真实浏览器 → 走降级分支，仅产出短签名主体（缺失恒定环境指纹段）。前缀 _02B4Z6wo00f01 与 golden 一致，URL/时间派生段结构同构。",
+    "server_acceptance": "verify_result.json 已证明今日头条 PC 端接口对 _signature 弱校验（serverEnforcesSignature=false），本地 47 字符短签名 candidateAccepted=true 已被所有接口接受。"
+  },
+  "real_env_fingerprint": {
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    "platform": "Win32",
+    "language": "zh-CN",
+    "languages": ["zh-CN", "zh"],
+    "hardwareConcurrency": 16,
+    "deviceMemory": 16,
+    "vendor": "Google Inc.",
+    "maxTouchPoints": 0,
+    "webdriver": false,
+    "appVersion": "5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    "screen": {"width": 4000, "height": 2500, "availWidth": 3200, "availHeight": 1910, "colorDepth": 24},
+    "devicePixelRatio": 0.800000011920929,
+    "timezoneOffset": -480,
+    "webgl": {
+      "vendor": "WebKit",
+      "renderer": "WebKit WebGL",
+      "unmaskedVendor": "Google Inc. (Microsoft)",
+      "unmaskedRenderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "version": "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+      "shading": "WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)"
+    }
+  },
+  "request_chain_analysis": {
+    "tool": "ch_analyze_request_chain",
+    "listener_id": "lst_6c6f25ea90894071",
+    "entry_count": 4227,
+    "propagation_edges": 0,
+    "locally_computed_cookies": 0,
+    "conclusion": "_signature 无跨请求依赖，是本地即时计算的 query 参数，不依赖任何前序响应或服务器下发 token/cookie。"
+  }
+}

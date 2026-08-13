@@ -1,0 +1,67 @@
+[case] baseline_events_only
+  -> len=168 listeners=8
+[case] mousemove_dispatch
+  -> len=168 listeners=8
+[case] me2_feed_80
+  -> len=168 listeners=8
+[case] mouse_plus_me2
+  -> len=168 listeners=8
+{
+  "ts": "2026-07-21T07:09:27.991Z",
+  "results": [
+    {
+      "label": "baseline_events_only",
+      "len": 168,
+      "head": "m7W0/QwDdDdkhf6I5fALfY3qV3H3Ysen0t9bFDhq",
+      "me23": false,
+      "listenerAdds": 8,
+      "events_patched": true,
+      "mouse": null,
+      "me2": null
+    },
+    {
+      "label": "mousemove_dispatch",
+      "len": 168,
+      "head": "O6m0Mm0fdEVi6fSd5fALfY3qV3H3Y0Zn0t9bFDhq",
+      "me23": false,
+      "listenerAdds": 8,
+      "events_patched": true,
+      "mouse": {
+        "dispatched": 540,
+        "rounds": 6,
+        "perRound": 30
+      },
+      "me2": null
+    },
+    {
+      "label": "me2_feed_80",
+      "len": 168,
+      "head": "mXmZMmwvDEIsDDS15fALfY3qV3H3YseJ0t9bFDhq",
+      "me23": false,
+      "listenerAdds": 8,
+      "events_patched": true,
+      "mouse": null,
+      "me2": {
+        "ok": true,
+        "fed": 80
+      }
+    },
+    {
+      "label": "mouse_plus_me2",
+      "len": 168,
+      "head": "Yv8MBdghdkDPgDy15fALfY3qV3H3Y0ZJ0t9bFDhq",
+      "me23": false,
+      "listenerAdds": 8,
+      "events_patched": true,
+      "mouse": {
+        "dispatched": 720,
+        "rounds": 8,
+        "perRound": 30
+      },
+      "me2": {
+        "ok": true,
+        "fed": 120
+      }
+    }
+  ]
+}

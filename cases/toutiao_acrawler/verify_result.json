@@ -1,0 +1,88 @@
+{
+  "generatedAt": "2026-07-12T06:30:50.576Z",
+  "interfaces": [
+    {
+      "interface": "hot_board",
+      "candidate": {
+        "http": "OK",
+        "status": "success",
+        "dataCount": 50
+      },
+      "candLen": 47,
+      "noSig": {
+        "http": "OK",
+        "status": "success",
+        "dataCount": 50
+      },
+      "garbage": {
+        "http": "OK",
+        "status": "success",
+        "dataCount": 50
+      },
+      "badAlg": {
+        "http": "OK",
+        "status": "success",
+        "dataCount": 50
+      },
+      "candidateAccepted": true,
+      "serverDistinguishesSignature": false
+    },
+    {
+      "interface": "feed",
+      "candidate": {
+        "http": "OK",
+        "message": "success",
+        "dataCount": 15
+      },
+      "candLen": 47,
+      "noSig": {
+        "http": "OK",
+        "message": "success",
+        "dataCount": 15
+      },
+      "garbage": {
+        "http": "OK",
+        "message": "success",
+        "dataCount": 15
+      },
+      "badAlg": {
+        "http": "OK",
+        "message": "success",
+        "dataCount": 15
+      },
+      "candidateAccepted": true,
+      "serverDistinguishesSignature": false
+    },
+    {
+      "interface": "tab_comments(真实id)",
+      "candidate": {
+        "http": "OK",
+        "message": "success",
+        "dataCount": 14
+      },
+      "candLen": 47,
+      "noSig": {
+        "http": "OK",
+        "message": "success",
+        "dataCount": 14
+      },
+      "garbage": {
+        "http": "OK",
+        "message": "success",
+        "dataCount": 14
+      },
+      "badAlg": {
+        "http": "OK",
+        "message": "success",
+        "dataCount": 14
+      },
+      "candidateAccepted": true,
+      "serverDistinguishesSignature": false
+    }
+  ],
+  "verdict": {
+    "candidateAcceptedByServer": true,
+    "serverEnforcesSignature": false,
+    "conclusion": "所有可访问接口对 _signature 校验宽松（无签名/乱码/candidate 响应一致）。candidate 未被拒绝（服务器接受），但“未被拒”不能反推算法 100% 正确——严格验证受时间戳不可逆 + 硬件指纹不可离线伪造的边界约束。"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-07-12T21:13:31.441243",
+  "interfaces": [
+    {
+      "interface": "feed",
+      "url": "https://www.toutiao.com/api/pc/feed/?category=news_hot&utm_source=toutiao&widen=1&max_behot_time=0&max_behot_time_tmp=0&tadrequire=true",
+      "signature": "_02B4Z6wo00f01xeQhWQAAIDBpjWu2iTePI8XsoHAAK.C96",
+      "sig_len": 47,
+      "http": 200,
+      "result": {
+        "status": null,
+        "message": "success",
+        "data_count": 15
+      }
+    },
+    {
+      "interface": "hot_board",
+      "url": "https://www.toutiao.com/hot-event/hot-board/?origin=toutiao_pc",
+      "signature": "_02B4Z6wo00f01JILziwAAIDCI67lk3CWdBiSKcqAAE7W1f",
+      "sig_len": 47,
+      "http": 200,
+      "result": {
+        "status": "success",
+        "message": null,
+        "data_count": 50
+      }
+    },
+    {
+      "interface": "tab_comments(自动id)",
+      "url": "https://www.toutiao.com/article/v4/tab_comments/?aid=24&app_name=news_article&group_id=7660429212376990217&item_id=7660429212376990217&offset=0&count=20",
+      "signature": "_02B4Z6wo00f01rFT2HAAAIDAAPbzzzvj6g6xcdzAAMYT38",
+      "sig_len": 47,
+      "http": 200,
+      "result": {
+        "status": null,
+        "message": "success",
+        "data_count": 14
+      }
+    }
+  ]
+}

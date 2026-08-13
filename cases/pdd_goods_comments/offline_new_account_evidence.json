@@ -1,0 +1,13 @@
+{
+  "ts": "2026-08-06T14:55+08:00",
+  "account": {"pdduid": "8806803917643", "goods_id": "983991442402", "tab_id": "FA9C80FA3968687400BB683A00727AD8"},
+  "browser_ctrl_before": {"page": 1, "n": 10, "error_code": null},
+  "offline_run": {
+    "stack": "tls-client chrome_150 + sdenv cached bundle",
+    "warm": "a3/ae4/a4/t.gif all 200",
+    "page1": {"n": 10, "ok": true, "token_gen_s": 19.8},
+    "page2": {"n": 0, "error_code": 54001, "verify": true}
+  },
+  "browser_after_page2_fail": {"page": 4, "error_code": 54001, "note": "account-level heat, not stack regression"},
+  "verdict": "OFFLINE_OK_ON_PAGE1: sdenv+chrome_150 pure-local works on fresh account; consecutive page without enough cool-down / budget trip 54001 and contaminates browser too"
+}

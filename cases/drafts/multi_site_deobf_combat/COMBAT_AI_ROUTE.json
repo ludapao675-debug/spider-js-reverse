@@ -1,0 +1,205 @@
+{
+  "title": "AI-routed multi-site combat",
+  "model": "AI chooses obfuscator_io vs jsvmp; pipeline does not hard-route",
+  "results": [
+    {
+      "id": "meituan_default",
+      "route_chosen": "obfuscator_io",
+      "why": "_0x 双引号 base64 密码本 + push/shift 旋转",
+      "ok": true,
+      "elapsed_s": 133.835,
+      "engine_used": "isolated_decode+super_ast",
+      "engines_used": [
+        "isolated_decode",
+        "super_ast"
+      ],
+      "score_before": 47.0,
+      "score_after": 48.4,
+      "decoder_calls_before": 0,
+      "decoder_calls_after": 0,
+      "tier1_disabled_hint": false,
+      "code_len_before": 201270,
+      "code_len_after": 233358,
+      "out_file": "cases\\drafts\\multi_site_deobf_combat\\meituan_default.combat.deob.js",
+      "verdict": "weak"
+    },
+    {
+      "id": "jd_gatherInfo",
+      "route_chosen": "obfuscator_io",
+      "why": "经典 _0x IIFE + parseInt 校验旋转",
+      "ok": true,
+      "elapsed_s": 124.034,
+      "engine_used": "worker",
+      "engines_used": [
+        "worker"
+      ],
+      "score_before": 45.8,
+      "score_after": 18.7,
+      "decoder_calls_before": 152,
+      "decoder_calls_after": 0,
+      "tier1_disabled_hint": false,
+      "code_len_before": 11071,
+      "code_len_after": 9930,
+      "out_file": "cases\\drafts\\multi_site_deobf_combat\\jd_gatherInfo.combat.deob.js",
+      "verdict": "strong"
+    },
+    {
+      "id": "jd_wbc_min",
+      "route_chosen": "obfuscator_io",
+      "why": "a0_0x 函数返回字符串数组（仍 obfuscator.io 变体）",
+      "ok": true,
+      "elapsed_s": 130.97,
+      "engine_used": "worker+super_ast",
+      "engines_used": [
+        "worker",
+        "super_ast"
+      ],
+      "score_before": 47.5,
+      "score_after": 42.2,
+      "decoder_calls_before": 2927,
+      "decoder_calls_after": 0,
+      "tier1_disabled_hint": false,
+      "code_len_before": 215832,
+      "code_len_after": 245831,
+      "out_file": "cases\\drafts\\multi_site_deobf_combat\\jd_wbc_min.combat.deob.js",
+      "verdict": "strong"
+    },
+    {
+      "id": "xhs_as_v2_ds",
+      "route_chosen": "jsvmp",
+      "why": "obfuscator 壳 + __$c hex 字节码解释器 → 走 JSVMP",
+      "ok": true,
+      "elapsed_s": 0.367,
+      "suspected": true,
+      "confidence": 0.55,
+      "family_hint": null,
+      "entry_functions": [],
+      "execution_trace_available": false,
+      "markers": [
+        "__$c"
+      ],
+      "warnings": [
+        "未提取到显式字节码数组（可能被编码/加密/动态生成）。静态解析不可用，请使用插桩法做动态追踪（ch_jsvmp(runtime=True)）",
+        "检测到 VM 结构但无法静态解析，建议优先用插桩脚本获取执行轨迹"
+      ],
+      "next_actions": [
+        "已定位 VM 结构；用 ch_trace_crypto_param 关联触发 VM 的业务请求",
+        "使用 ch_page_run_js 注入插桩脚本（见 artifacts 的 instrumentation_script），动态收集 (pc, opcode) 轨迹后回灌 ch_jsvmp(runtime=True)",
+        "对提取到的 handler 用 ch_debugger_get_scope / ch_breakpoint_set_by_url 验证语义",
+        "把解析出的加密流程与 ch_cipher_search 命中结果交叉验证，确认算法"
+      ],
+      "code_len": 61912,
+      "verdict": "correct_tool",
+      "note": "未跑 ch_deobfuscate_auto / Tier1（AI 判定为 VM）"
+    },
+    {
+      "id": "xhs_as_v2_fp",
+      "route_chosen": "jsvmp",
+      "why": "_0x 壳 + 自研字节码/opcode 分发 → 走 JSVMP",
+      "ok": true,
+      "elapsed_s": 48.692,
+      "suspected": true,
+      "confidence": 0.55,
+      "family_hint": null,
+      "entry_functions": [],
+      "execution_trace_available": false,
+      "markers": [
+        "_sabo_"
+      ],
+      "warnings": [
+        "未提取到显式字节码数组（可能被编码/加密/动态生成）。静态解析不可用，请使用插桩法做动态追踪（ch_jsvmp(runtime=True)）",
+        "检测到 VM 结构但无法静态解析，建议优先用插桩脚本获取执行轨迹"
+      ],
+      "next_actions": [
+        "已定位 VM 结构；用 ch_trace_crypto_param 关联触发 VM 的业务请求",
+        "使用 ch_page_run_js 注入插桩脚本（见 artifacts 的 instrumentation_script），动态收集 (pc, opcode) 轨迹后回灌 ch_jsvmp(runtime=True)",
+        "对提取到的 handler 用 ch_debugger_get_scope / ch_breakpoint_set_by_url 验证语义",
+        "把解析出的加密流程与 ch_cipher_search 命中结果交叉验证，确认算法"
+      ],
+      "code_len": 395823,
+      "verdict": "correct_tool",
+      "note": "未跑 ch_deobfuscate_auto / Tier1（AI 判定为 VM）"
+    },
+    {
+      "id": "ks_kws5",
+      "route_chosen": "jsvmp",
+      "why": "Doflamingo/_sabo_* 自研栈机",
+      "ok": true,
+      "elapsed_s": 11.156,
+      "suspected": true,
+      "confidence": 0.55,
+      "family_hint": null,
+      "entry_functions": [],
+      "execution_trace_available": false,
+      "markers": [
+        "Doflamingo",
+        "_sabo_"
+      ],
+      "warnings": [
+        "未提取到显式字节码数组（可能被编码/加密/动态生成）。静态解析不可用，请使用插桩法做动态追踪（ch_jsvmp(runtime=True)）",
+        "检测到 VM 结构但无法静态解析，建议优先用插桩脚本获取执行轨迹"
+      ],
+      "next_actions": [
+        "已定位 VM 结构；用 ch_trace_crypto_param 关联触发 VM 的业务请求",
+        "使用 ch_page_run_js 注入插桩脚本（见 artifacts 的 instrumentation_script），动态收集 (pc, opcode) 轨迹后回灌 ch_jsvmp(runtime=True)",
+        "对提取到的 handler 用 ch_debugger_get_scope / ch_breakpoint_set_by_url 验证语义",
+        "把解析出的加密流程与 ch_cipher_search 命中结果交叉验证，确认算法"
+      ],
+      "code_len": 48606,
+      "verdict": "correct_tool",
+      "note": "未跑 ch_deobfuscate_auto / Tier1（AI 判定为 VM）"
+    },
+    {
+      "id": "ks_kws8",
+      "route_chosen": "jsvmp",
+      "why": "Jimbei/_ace_* 同族自研栈机",
+      "ok": true,
+      "elapsed_s": 15.252,
+      "suspected": false,
+      "confidence": 0.3,
+      "family_hint": null,
+      "entry_functions": [],
+      "execution_trace_available": false,
+      "markers": [
+        "Jimbei",
+        "_ace_"
+      ],
+      "warnings": [
+        "未提取到显式字节码数组（可能被编码/加密/动态生成）。静态解析不可用，请使用插桩法做动态追踪（ch_jsvmp(runtime=True)）",
+        "检测到 VM 结构但无法静态解析，建议优先用插桩脚本获取执行轨迹"
+      ],
+      "next_actions": [
+        "未检测到强 JSVMP 特征；若怀疑是混淆，可先用 ch_static_analyze 做加密管道检测"
+      ],
+      "code_len": 48140,
+      "verdict": "correct_tool",
+      "note": "未跑 ch_deobfuscate_auto / Tier1（AI 判定为 VM）"
+    },
+    {
+      "id": "ks_kws19",
+      "route_chosen": "jsvmp",
+      "why": "Luffy/_garp_* 同族自研栈机",
+      "ok": true,
+      "elapsed_s": 20.52,
+      "suspected": false,
+      "confidence": 0.3,
+      "family_hint": null,
+      "entry_functions": [],
+      "execution_trace_available": false,
+      "markers": [
+        "Luffy",
+        "_garp_"
+      ],
+      "warnings": [
+        "未提取到显式字节码数组（可能被编码/加密/动态生成）。静态解析不可用，请使用插桩法做动态追踪（ch_jsvmp(runtime=True)）",
+        "检测到 VM 结构但无法静态解析，建议优先用插桩脚本获取执行轨迹"
+      ],
+      "next_actions": [
+        "未检测到强 JSVMP 特征；若怀疑是混淆，可先用 ch_static_analyze 做加密管道检测"
+      ],
+      "code_len": 48819,
+      "verdict": "correct_tool",
+      "note": "未跑 ch_deobfuscate_auto / Tier1（AI 判定为 VM）"
+    }
+  ]
+}

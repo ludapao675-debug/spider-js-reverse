@@ -1,0 +1,24 @@
+{
+  "ab_len": 168,
+  "raw_len": 124,
+  "ab_rets": [],
+  "captured_n": 2,
+  "comparisons": [
+    {
+      "idx": 0,
+      "arr146_b64_len": 195,
+      "arr146_b64_head": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "equals_final_raw_prefix": false,
+      "raw_len": 124,
+      "prefix_match_n": 0
+    },
+    {
+      "idx": 1,
+      "arr146_b64_len": 195,
+      "arr146_b64_head": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "equals_final_raw_prefix": false,
+      "raw_len": 124,
+      "prefix_match_n": 0
+    }
+  ]
+}
