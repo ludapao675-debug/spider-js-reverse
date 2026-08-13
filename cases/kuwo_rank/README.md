@@ -6,9 +6,8 @@
 - **问题**: 在发包拦截之前，传统 `xhr.send` 的动态 Hook 无法直接观察到加密生成的内部运算。
 
 ## 2. 问题分析与定位
-通过使用 `ch_listener_start` 和 `ch_listener_read` 截获发出的真实请求和当时环境的 Cookies：
-- 观察到包含关键鉴权的 Cookie：`Hm_Iuvt_cdb524f42f23cer9b268564v7y735ewrq2324`。
-- 在底层的 Webpack 代码（`assets/js_samples/ccdf548.js`）中搜索定位到了 `r.a.defaults.headers["Secret"] = f(o, v)` 这行代码。
+抓包可见请求头 `Secret` 与 Cookie `Hm_Iuvt_cdb524f42f23cer9b268564v7y735ewrq2324`。
+Webpack 中定位到 `headers["Secret"] = f(o, v)`：`o` 为该 Cookie 值，`v` 为同名常量。
 
 ## 3. 算法原理与闭环
 1. **`reqId`**:

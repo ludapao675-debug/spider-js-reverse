@@ -1,7 +1,6 @@
 # 采招网（bidcenter.com.cn）搜索分页请求本地复现
 
 > 逆向目标：翻页时的网络请求 + 加密响应本地解密复现
-> 工具链：crypto-hunter-lite MCP（attach 模式接管用户已开 Chrome）+ 定位 + 抓包 + 静态审计
 > 日期：2026-08-02
 
 ## 一、目标接口（定位结论）
@@ -33,7 +32,7 @@
 `repro.py`（依赖 `requests` + `pycryptodome`）：
 
 ```bash
-E:\aicode\.venv\Scripts\python.exe repro.py
+python cases/bidcenter_search_pagination/repro.py
 ```
 
 - `fetch_page(keywords, page, guid, cookies=None)`：发请求 + 解密
@@ -57,6 +56,5 @@ E:\aicode\.venv\Scripts\python.exe repro.py
 
 ## 六、证据来源
 
-- 监听器 `lst_a95b549c53cf40a9` 捕获 `1896.556`（主分页请求，完整 POST body + 响应密文）
-- `ch_fetch_url` 抓 `searchv16.js` line 49/50/1766-1776 解密函数
-- 真实密文样本见 `captured_cipher.txt`
+- 源码：`searchv16.js` 第 49/50、1766–1776 行解密函数
+- 本地 `repro.py` 对真实分页接口解密成功

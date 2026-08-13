@@ -58,21 +58,9 @@ function x(str) {                     // 解码
 - 本地裸请求无需构造，`session.get(首页)` 自动带上即可
 - 接口封装 `Xc`（模块 7374）：`localStorage.auth_token` 存在时非 admin 接口自动带 `Authorization: Bearer <token>`
 
-### 5. 历史快照防爬（模块 64446）
+### 5. 历史快照
 
-```
-POST /api/history-token   body={"date":"yyyy-MM-dd","at":"HH:mm"}
-```
-
-| 场景 | 响应 |
-|------|------|
-| 3 个月内，无验证 | `401 {"error":"需要人机验证","needCaptcha":true}` |
-| 过阿里云 feilin 滑块后重发 | `{"passToken","passExpiresAt","href"}` |
-| 3 个月以前 | 需登录（`Bearer auth_token`），否则 401 |
-
-- 滑块场景：`prefix="wieavs"`，`sceneId="15143nk9"`（阿里云验证码 2.0）
-- `passToken` 存 `sessionStorage("history_pass")`，有效期内重发 `{passToken}` 免滑块
-- **结论**：`history-token` 为独立人机验证门禁，与 AES 协议无关；纯协议无法绕过，需过滑块或登录
+`POST /api/history-token` 另有独立人机验证门禁，与 AES 协议无关。本案例不覆盖。
 
 ## 已验证接口
 
@@ -84,8 +72,6 @@ POST /api/history-token   body={"date":"yyyy-MM-dd","at":"HH:mm"}
 | `/api/ai/hotspot` | - | 今日热点 AI 解读（theme/analysis/trendingTopics） |
 | `/api/ai/brief` | `topicId` | 单条词条 AI 简报 |
 | `/api/sentiment/thermometer` | - | 情绪温度计（temperature/emotionDistribution/keywords） |
-| `/api/history-token` | `date, at` (POST) | 历史快照门禁（需滑块/登录） |
-| `/api/subscriptions` | - | 关注词列表（需登录） |
 
 ## 复现脚本
 
@@ -95,7 +81,6 @@ python repro.py thermometer
 python repro.py hotlist
 python repro.py ranking --type rising|new
 python repro.py brief --id 834724
-python repro.py history-token --date 2026-08-11 --at 14:00
 ```
 
 验证结果：
@@ -105,7 +90,6 @@ python repro.py history-token --date 2026-08-11 --at 14:00
 - `ranking/rising`：rank1「初代网红晚晚开始卖衣服」升6名，`_e` 加密闭环 ✅
 - `ranking/new`：rank1「美联储9月加息概率再降」首次上榜，`_e` 加密闭环 ✅
 - `brief`：请求协议与前端一致（topicId 编码匹配浏览器抓包），"无效词条"=词条库无该词条 AI 简报（数据时效，非协议问题）
-- `history-token`：401 needCaptcha=true，人机验证门禁确认
 
 ## 踩坑记录
 

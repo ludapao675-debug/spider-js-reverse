@@ -3,7 +3,6 @@
 > 站点：`https://passport.yuewen.com/yuewen.html`
 > 接口：`https://ptlogin.yuewen.com/login/login`（JSONP GET）
 > 日期：2026-08-13
-> 任务：`task_20260813_062458_8078e0ea`
 
 ## 结论：密码用 **RSA-1024 / PKCS#1 v1.5**，输出 **hex**（不是 JSEncrypt/base64）
 
@@ -71,7 +70,7 @@ LoginV1.jsonp(baseUrl + '/login/login', data);  // nextAction===0
 ## 复现
 
 ```bash
-d:\python_work\venv\Scripts\python.exe cases/yuewen_login/repro.py
+python cases/yuewen_login/repro.py
 ```
 
 脚本会：拉登录页解析 `modulus`/`ywtoken` → RSA hex 登录 → 与网页合同 `72141` 比对 → 再发一次明文做负向。
@@ -87,6 +86,5 @@ python cases/yuewen_login/repro.py --page-json "{\"code\":72141,\"message\":\"�
 ## 踩坑
 
 - 输出是 **hex** 不是 base64；不要按 JSEncrypt 案例套。
-- 登录是 **JSONP script**，不是 XHR。监听器靠 CDP `Network.requestWillBeSent` 能抓到 `resource_type=Script`，但 `response_body` 经常为空；对齐返回应挂钩 `LoginV1.loginCallback` 或本地直接 GET JSONP。
-- 后端 DrissionPage 单例被 15s MCP 超时污染时，`ch_page_*` 会误报成「页面卡死」；阅文页本身很轻。重启 FastAPI（不要杀 9222 的 Edge）即可恢复。
-- 失败多次可能出图形验证码 / 滑块（`nextAction` / `showSlideCode`），假账号探测未触发。
+- 登录是 **JSONP script**，不是 XHR。对齐返回应挂钩 `LoginV1.loginCallback`，或本地直接 GET JSONP。
+- 失败多次可能出图形验证码 / 滑块（`nextAction` / `showSlideCode`），假账号探测未触发。本案例不覆盖验证码。
