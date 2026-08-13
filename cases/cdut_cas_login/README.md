@@ -14,7 +14,6 @@
 | 公钥 | `GET /cas/jwt/publicKey`（PEM，`encryptEnabled=true`） |
 | username | **明文** |
 | 提交 | `POST /cas/login?service=...` 表单 `#fm1` |
-| 参考案例 | `cases/pku_login`（同为 JSEncrypt；本站多 `__RSA__` 前缀） |
 
 ### 加密公式
 

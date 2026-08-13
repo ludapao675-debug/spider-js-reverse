@@ -76,8 +76,8 @@
 
 ## 二、 复现脚本使用方法
 
-运行 Python 离线复现代码 [`cases/skyscanner_flight/repro.py`](file:///f:/AICode/%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7/crypto-hunter-lite/cases/skyscanner_flight/repro.py)：
+运行 `cases/skyscanner_flight/repro.py`：
 
 ```bash
-d:\python_work\venv\Scripts\python.exe cases/skyscanner_flight/repro.py
+python cases/skyscanner_flight/repro.py
 ```

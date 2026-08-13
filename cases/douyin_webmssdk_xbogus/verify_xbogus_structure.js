@@ -12,7 +12,7 @@ const fs = require('fs');
 const vm = require('vm');
 const path = require('path');
 
-const SAMPLE = path.join(__dirname, '..', 'drafts', 'deob_test', 'webmssdk.es5.js');
+const SAMPLE = path.join(__dirname, 'webmssdk.es5.js');
 const src = fs.readFileSync(SAMPLE, 'utf8');
 
 const ALPHABET = 'Dkdpgh4ZKsQB80/Mfvw36XI1R25+WUAlEi7NLboqYTOPuzmFjJnryx9HVGcaStCe';

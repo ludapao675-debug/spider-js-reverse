@@ -2,15 +2,12 @@
 
 > 站点：国家大学生就业服务平台登录（`jy.chsi.com.cn` via `account.chsi.com.cn/passport`）
 > 日期：2026-07-15
-> 工具：crypto-hunter-lite（GUI 启动 Chromium @9222 + final_capture.user.js 注入 + 监听器）
 
 ## 核心结论
 
 **密码为【明文】提交（仅 HTTPS 保护），无客户端加密。**
 
-- 监听器捕获的真实登录 POST（`23809BCEC35710707DE6C4A21CA29E`）body 为：
-  `username=3220260715&password=Chsi%40Test2026&tp=crpusr&lt=LT-...&execution=...`
-  → `password=Chsi%40Test2026` 解码即 `Chsi@Test2026`，是可读明文，**非密文**。
+- 真实登录 POST 的 `password` 字段是 URL 编码后的明文，**不是密文**。
 - 表单 `onsubmit = null`，提交按钮无 `onclick`，按钮仅触发原生 `$("#fm1").submit()`。
 - 页面 `window.doEncrypt` / `window.doDecrypt` **声明未赋值（undefined）**，不参与提交路径——属干扰项（可能用于站内其他模块）。
 
@@ -37,7 +34,7 @@
 ## 复现
 
 ```bash
-d:\python_work\venv\Scripts\python.exe cases/chsi_login/repro.py <用户名> <密码>
+python cases/chsi_login/repro.py <用户名> <密码>
 ```
 
 `repro.py` 自动 GET 解析 `lt`/`execution` 再 POST，**负向验证通过**（错误凭证 → 服务端返回登录页+错误提示，HTTP 200，证明参数集正确）。
@@ -50,7 +47,5 @@ d:\python_work\venv\Scripts\python.exe cases/chsi_login/repro.py <用户名> <�
 
 ## 证据
 
-- 监听器 `lst_abaeaaa3c55d4a00`（task `task_20260715_063452_e7ed48c6`）：
-  - 请求 `23809BCEC35710707DE6B2C4A21CA29E`：真实登录 POST，密码明文（见 `ch_extract_request`）。
-  - 控制台钩子 `[ENC]`/`[NET]`/`__ch` 确认无加密签名原文字段注入密码。
-- 复现脚本负向验证输出：HTTP 200 + 返回登录页。
+- 登录 POST 的 `password` 为明文。
+- 复现脚本负向验证：错误凭证 → HTTP 200 + 返回登录页错误提示。
