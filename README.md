@@ -15,6 +15,7 @@
 | **04** | **CHSI (学信网)** | 统一登录 | 明文 HTTPS 提交 | 基础防护 | ✅ 纯协议闭环 | [查看文档](cases/chsi_login/README.md) |
 | **05** | **NJU CAS (南京大学)** | 统一登录 | AES-128-CBC 隐藏盐动态加密 | 验证码 | ✅ 纯协议闭环 | [查看文档](cases/nju_login/README.md) |
 | **06** | **PKU CAS (北京大学)** | 统一登录 | RSA-2048 / PKCS#1 v1.5 | 动态 Key 注入 | ✅ 纯协议闭环 | [查看文档](cases/pku_login/README.md) |
+| **07** | **阅文通行证** | 统一登录 | RSA-1024 / PKCS#1 v1.5（JSBN hex） | JSONP + ywtoken | ✅ 纯协议闭环 | [查看文档](cases/yuewen_login/README.md) |
 
 ---
 
@@ -74,7 +75,8 @@ crypto-hunter-lite/
 │   ├── skyscanner_flight/      # 天巡机票接口签名
 │   ├── jnu_login/              # 东软 3DES 登录加密
 │   ├── nju_login/              # AES-CBC 动态盐登录
-│   └── pku_login/              # RSA-2048 登录
+│   ├── pku_login/              # RSA-2048 登录
+│   └── yuewen_login/           # 阅文 RSA-1024 hex JSONP 登录
 └── server/                     # 分析自动化辅助工具集
 ```
 
