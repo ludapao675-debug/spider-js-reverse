@@ -1,39 +1,92 @@
-# yuewen_login 登录密码加密参数逆向
+# 阅文通行证登录 — 密码加密参数逆向
 
-> 站点：https://passport.yuewen.com/yuewen.html
-> 工具：crypto-hunter-lite（服务端抓源码 + 官方 JSBN 离线长度校验）
+> 站点：`https://passport.yuewen.com/yuewen.html`
+> 接口：`https://ptlogin.yuewen.com/login/login`（JSONP GET）
+> 日期：2026-08-13
+> 任务：`task_20260813_062458_8078e0ea`
 
-## 结论
+## 结论：密码用 **RSA-1024 / PKCS#1 v1.5**，输出 **hex**（不是 JSEncrypt/base64）
 
-- 加密算法：**RSA-1024 / PKCS#1 v1.5（JSBN `RSAKey.encrypt`，输出 hex，不是 JSEncrypt/base64）**
-- 密钥来源：页面内联 `LoginV1.init({modulus, exponent})` 注入静态 1024-bit RSA 公钥；exponent 固定 `10001`。库文件 https://ywloginstatic.yuewen.com/rsa/rsa_encrypt.js。
+```
+密文 = RSAKey.encrypt(password)          # JSBN
+     = hex( RSA-1024( PKCS#1 v1.5 pad(utf8(password)) ) )
+长度 = 256 hex 字符（128 字节）
+```
 
-## 证据
+- 公钥：页面内联 `LoginV1.init({ modulus, exponent: "10001" })`，写入 `LoginV1.config`
+- 库：`https://ywloginstatic.yuewen.com/rsa/rsa_encrypt.js`（`pkcs1pad2` + `RSAEncrypt`）
+- 封装：`https://ywloginstatic.yuewen.com/js4/login_yw.js` 的 `rsa_encryption`
+- PKCS#1 随机填充，**不能逐字节比对密文**；校验 hex 长度 256、两次加密结果不同
+- 若 `encrypt()` 结果长度 ≤ 50 会回退明文（失败兜底，正常 1024 位不会走这条）
 
-- 页面 LoginV1.init 注入 1024-bit modulus + exponent 10001
-- login_yw.js rsa_encryption: RSAKey.setPublic + encrypt，输出 hex，长度>50 才当密文
-- 库 https://ywloginstatic.yuewen.com/rsa/rsa_encrypt.js（JSBN pkcs1pad2 + RSAEncrypt）
-- 离线 Node vm 跑官方 rsa_encrypt.js：同明文两次加密 hex 长度均 256 且不相等
-- Python PKCS1_v1_5 同公钥：输出 hex 长度 256、每次不同、模数 1024-bit
-- 提交 JSONP https://ptlogin.yuewen.com/login/login 或 /login/checkcode，password 字段为 RSA hex
+### 调用链
 
-## 表单字段
+```js
+function rsa_encryption(password) {
+    var rsa = new RSAKey();
+    rsa.setPublic(LoginV1.config.modulus, LoginV1.config.exponent);
+    var encrypt_password = rsa.encrypt(password);
+    if (encrypt_password.length > 50) return encrypt_password;
+    else return password;
+}
 
-| name | id | type | hidden | value 示例 |
-|------|----|------|:------:|-----------|
-|  | username |  |  |  |
-|  | password |  |  |  |
-|  | txtCode |  |  |  |
-|  | autologin |  |  |  |
-| ywtoken |  |  |  |  |
-| sessionkey |  |  |  |  |
+// LoginV1.login → JSONP
+data.password = rsa_encryption(password);
+data.method = 'LoginV1.loginCallback';
+LoginV1.jsonp(baseUrl + '/login/login', data);  // nextAction===0
+// nextAction!==0 时走 /login/checkcode
+```
 
-## 相关脚本
+## 提交参数（JSONP GET `/login/login`）
 
-- JSBN RSA：https://ywloginstatic.yuewen.com/rsa/rsa_encrypt.js
-- 登录客户端：https://ywloginstatic.yuewen.com/js4/login_yw.js（`rsa_encryption`）
-- 公钥注入：https://passport.yuewen.com/yuewen.html（`LoginV1.init`）
+| 字段 | 说明 |
+|------|------|
+| `appId` | `37` |
+| `areaId` | `1` |
+| `username` | 账号（可加 `loginPostfix`） |
+| `password` | **RSA hex 密文** |
+| `ywtoken` | 页面 `LoginV1.init` 注入，每次打开会变 |
+| `code` | 图形验证码；失败码 `-11004` 时出现 |
+| `sessionkey` | 验证码会话，对应 `LoginV1.codeKey` |
+| `method` | `LoginV1.loginCallback`（jQuery JSONP 另带 `callback=`） |
+| `format` | `jsonp` |
+| `auto` | 自动登录 0/1 |
+| `returnurl` / `target` / `ajaxdm` / `jumpdm` | `buildBaseData()` 公共字段 |
 
-## 备注
+表单：`#username` `#password` `#txtCode` `#autologin` `#protocol1`。
 
-PKCS#1 v1.5 随机填充，不能逐字节比对两次密文。验证用：hex 长度 256、两次不同、官方 JSBN 与 Python PKCS1_v1_5 格式一致。登录请求还需 ywtoken/可能的图形验证码，本案不做真实账号登录。当前调试浏览器约 124 个 CDP target，页面侧 ch_detect_login_encryption 超时，结论来自服务端抓源码 + 离线 JSBN。sdenv verify-code 加 super_env 会塞住 FastAPI 事件循环，改用隔离 Node vm。
+## 协议对齐（假账号，2026-08-13）
+
+成功标准：**本地 JSONP 的 `code`/`message` 与网页 `LoginV1.loginCallback` 一致**。
+
+| 路径 | `code` | `message` |
+|------|--------|-----------|
+| 网页 RSA hex / 本地 `PKCS1_v1_5` hex | **72141** | 账号或密码错误，请重新输入 |
+| 负向：password 发明文 | **-11016** | 您输入的账号或密码不正确，请重新输入 |
+
+`72141` 不在 `LoginV1.errors` 表里，页面用 `data.message` 展示。明文走 `-11016` 说明服务端能区分「密文格式正确但账号错」和「没加密」。
+
+`data.autoLoginExpiredTime` 每次不同，比对时忽略。
+
+## 复现
+
+```bash
+d:\python_work\venv\Scripts\python.exe cases/yuewen_login/repro.py
+```
+
+脚本会：拉登录页解析 `modulus`/`ywtoken` → RSA hex 登录 → 与网页合同 `72141` 比对 → 再发一次明文做负向。
+
+可选：把页面回调 JSON 传进去再对一次：
+
+```bash
+python cases/yuewen_login/repro.py --page-json "{\"code\":72141,\"message\":\"账号或密码错误，请重新输入\"}"
+```
+
+不提交真实账号。`ywtoken` 每次从 HTML 现取。
+
+## 踩坑
+
+- 输出是 **hex** 不是 base64；不要按 JSEncrypt 案例套。
+- 登录是 **JSONP script**，不是 XHR。监听器靠 CDP `Network.requestWillBeSent` 能抓到 `resource_type=Script`，但 `response_body` 经常为空；对齐返回应挂钩 `LoginV1.loginCallback` 或本地直接 GET JSONP。
+- 后端 DrissionPage 单例被 15s MCP 超时污染时，`ch_page_*` 会误报成「页面卡死」；阅文页本身很轻。重启 FastAPI（不要杀 9222 的 Edge）即可恢复。
+- 失败多次可能出图形验证码 / 滑块（`nextAction` / `showSlideCode`），假账号探测未触发。
