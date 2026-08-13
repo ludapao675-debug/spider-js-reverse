@@ -1,0 +1,2763 @@
+CDP=http://127.0.0.1:9222 rounds=5 biases=[0,3,-3,6,-6] pause=3000ms
+璇风洴鐫€楠岃瘉鐮侊細姣忚疆鎷栧墠/鎷栧悗浼氬仠椤匡紝鐪嬫嫾鍥惧潡鐩稿缂哄彛鍋忓乏杩樻槸鍋忓彸銆?
+
+========== ROUND 1/5  GAP_BIAS=0 ==========
+
+============================================================
+[1] 鍔犺浇 jd_cookies.json ...
+[鉁揮 Cookie 闀垮害: 2310
+[2] 鍚姩 CDP-attach http://127.0.0.1:9222 Blink: http://127.0.0.1:9222
+[鉁揮 CDP attach pages=1 url=https://mygiftcard.jd.com/giftcard/myGiftCardInit.action
+[3] 鎵撳紑绀煎搧鍗￠〉...
+[鉁揮 宸插湪鐩爣椤? https://mygiftcard.jd.com/giftcard/myGiftCardInit.action
+[4] 濉崱鍙峰苟鐐瑰嚮绔嬪嵆缁戝畾 鈫?瑙﹀彂 /fp WASM(AwPF)...
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=PtfIOwABAAAFPyBI-N0AMHOWPNh8kjltcuxVp31p4ClCtN6PDmwkAy-sUQ8rw8tTN6TXW2cX7wE2laF0iisEswAAAAA&interfaceId=268435458&fp=bh
+[NET] /check POST fields={"si":{"len":91,"prefix":"PtfIOwAB"},"lang":{"len":1,"prefix":"1"},"tk":{"len":2098,"prefix":"AwPFBiCD"},"ct":{"len":1948,"prefix":"AwPFBbDT"},"cs":{"len":1543,"prefix":"AwPFBIB6"},"version":{"len":1,"prefix":"3"},"client":{"len":2,"prefix":"pc"}}
+[鉁揮 /fp ct鍓嶇紑=AwPF code=0 st=DKk78JeIKrpHPvqe
+[5] 绛夊緟 /check tp=30 鎷煎浘鍥惧寘...
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=PtfIOwABAAAFPyBI-N0AMHOWPNh8kjltcuxVp31p4ClCtN6PDmwkAy-sUQ8rw8tTN6TXW2cX7wE2laF0iisEswAAAAA&interfaceId=268435460&fp=bh
+[NET] /check RESP code=0 tp=30 st=VOQWukLqBHrUnXxx
+[NET] sgm POST (ignored telemetry)
+[5b] captcha layout:
+{
+  "imgs": [
+    {
+      "w": 14,
+      "h": 14,
+      "nw": 96,
+      "nh": 96,
+      "cls": ""
+    },
+    {
+      "w": 14,
+      "h": 14,
+      "nw": 32,
+      "nh": 32,
+      "cls": ""
+    },
+    {
+      "w": 0,
+      "h": 0,
+      "nw": 40,
+      "nh": 40,
+      "cls": "img_tips"
+    },
+    {
+      "w": 271.2708435058594,
+      "h": 167.6875,
+      "nw": 275,
+      "nh": 170,
+      "cls": ""
+    },
+    {
+      "w": 64.11458587646484,
+      "h": 167.6875,
+      "nw": 65,
+      "nh": 170,
+      "cls": ""
+    },
+    {
+      "w": 48,
+      "h": 48,
+      "nw": 96,
+      "nh": 96,
+      "cls": "move-img"
+    },
+    {
+      "w": 0,
+      "h": 0,
+      "nw": 200,
+      "nh": 200,
+      "cls": "feedback_arrow"
+    }
+  ],
+  "imgW": 271.2708435058594,
+  "imgH": 167.6875,
+  "imgNatural": [
+    275,
+    170
+  ],
+  "handle": {
+    "x": 681.6979370117188,
+    "y": 673.6875,
+    "width": 48,
+    "height": 48,
+    "top": 673.6875,
+    "right": 729.6979370117188,
+    "bottom": 721.6875,
+    "left": 681.6979370117188
+  },
+  "trackW": 271.2708435058594
+}
+[6a] gap JS:
+{
+  "ok": true,
+  "bestX": 161,
+  "offsetCss": 8,
+  "scale": 0.05090909090909091,
+  "bg": [
+    275,
+    170
+  ],
+  "piece": [
+    65,
+    170
+  ],
+  "pieceBox": [
+    7,
+    92,
+    51,
+    129
+  ],
+  "score": 9639.605496826172,
+  "source": "check_img_b1_b2"
+}
+[6b] gap OpenCV:
+{
+  "ok": true,
+  "bestX": 166,
+  "bestY": 90,
+  "score": 0.43183642625808716,
+  "votes": [
+    {
+      "method": "TM_CCORR_NORMED_edge",
+      "x": 166,
+      "y": 90,
+      "score": 0.43183642625808716
+    },
+    {
+      "method": "TM_CCOEFF_NORMED_edge",
+      "x": 166,
+      "y": 90,
+      "score": 0.3493804335594177
+    },
+    {
+      "method": "TM_CCORR_NORMED_gray",
+      "x": 166,
+      "y": 90,
+      "score": 0.9002879858016968
+    },
+    {
+      "method": "TM_CCOEFF_NORMED_gray",
+      "x": 166,
+      "y": 90,
+      "score": 0.7444831132888794
+    },
+    {
+      "method": "TM_SQDIFF_NORMED_gray",
+      "x": 166,
+      "y": 90,
+      "score": 0.7497880756855011
+    },
+    {
+      "method": "white_outline",
+      "x": 259,
+      "y": 90,
+      "score": 226.95
+    }
+  ],
+  "band": [
+    78,
+    142
+  ],
+  "bg": [
+    275,
+    170
+  ],
+  "piece": [
+    65,
+    170
+  ],
+  "pieceBox": [
+    5,
+    90,
+    51,
+    129
+  ],
+  "cropOffsetX": 5,
+  "source": "opencv_multi"
+}
+[6c] 宸蹭繚瀛?b1/b2 鍒?debug/
+[6] 缂哄彛閫夌敤:
+{
+  "source": "opencv_multi",
+  "bestX": 166,
+  "offsetCss": 164,
+  "scale": 0.9864394309303978,
+  "trackW": 271.2708435058594
+}
+[7] 鎷熶汉鎷栧姩 .move-img offsetX=164 (bestX=166, scale=0.9864394309303978, trackW=271.2708435058594) ...
+>>> 璇风湅灞忓箷锛氬嵆灏嗘嫋鍒?offset=164px锛坆estX=166 bias=0锛夛紝3000ms 鍚庡紑濮嬫嫋
+[6.5] 娉ㄥ叆鍚堟垚 touche_message:
+{
+  "synthLen": 1389,
+  "synthSample": [
+    {
+      "did": "",
+      "cn": "",
+      "sx": 363,
+      "sy": 346,
+      "px": 363,
+      "py": 346,
+      "time": 1785481629579,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 103,
+      "sy": 614,
+      "px": 103,
+      "py": 614,
+      "time": 1785481629979,
+      "type": "click"
+    }
+  ]
+}
+[7a] sample track n=25 totalDt=7803 endX=164
+>>> 鎷栧畬浜嗭紝璇风湅鎷煎浘鍧楁槸鍚﹀鍑嗙己鍙ｏ紙鍋?3000ms 鍐嶈缁撴灉锛?[NET] /check POST fields={"si":{"len":91,"prefix":"PtfIOwAB"},"lang":{"len":1,"prefix":"1"},"tk":{"len":3164,"prefix":"AwPFCUCx"},"ct":{"len":1948,"prefix":"AwPFBbDu"},"cs":{"len":1543,"prefix":"AwPFBIAp"},"version":{"len":1,"prefix":"3"},"client":{"len":2,"prefix":"pc"}}
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=PtfIOwABAAAFPyBI-N0AMHOWPNh8kjltcuxVp31p4ClCtN6PDmwkAy-sUQ8rw8tTN6TXW2cX7wE2laF0iisEswAAAAA&interfaceId=268435460&fp=bh
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=PtfIOwABAAAFPyBI-N0AMHOWPNh8kjltcuxVp31p4ClCtN6PDmwkAy-sUQ8rw8tTN6TXW2cX7wE2laF0iisEswAAAAA&interfaceId=268435459&fp=bh
+[NET] /check RESP code=16807 tp=undefined st=TUNqHuryx64aEzGE
+[NET] sgm POST (ignored telemetry)
+[7c] runtime xyList:
+{
+  "n": -1
+}
+[7b] drag done:
+{
+  "mode": "sample",
+  "n": 25,
+  "endX": 164
+}
+[7d] 瀹為檯鎻愪氦 f.touchList:
+{
+  "touchListLen": 10,
+  "touchList": [
+    {
+      "did": "",
+      "cn": "",
+      "sx": 363,
+      "sy": 346,
+      "px": 363,
+      "py": 346,
+      "time": 1785481629579,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 103,
+      "sy": 614,
+      "px": 103,
+      "py": 614,
+      "time": 1785481629979,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 951,
+      "sy": 541,
+      "px": 951,
+      "py": 541,
+      "time": 1785481630379,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 394,
+      "sy": 364,
+      "px": 394,
+      "py": 364,
+      "time": 1785481630779,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 571,
+      "sy": 764,
+      "px": 571,
+      "py": 764,
+      "time": 1785481631179,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 392,
+      "sy": 646,
+      "px": 392,
+      "py": 646,
+      "time": 1785481631579,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 1059,
+      "sy": 671,
+      "px": 1059,
+      "py": 671,
+      "time": 1785481631979,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 1153,
+      "sy": 361,
+      "px": 1153,
+      "py": 361,
+      "time": 1785481632379,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 306,
+      "sy": 253,
+      "px": 306,
+      "py": 253,
+      "time": 1785481632779,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "move-img",
+      "time": 1785481633179,
+      "pt": [
+        [
+          706,
+          920,
+          706,
+          698,
+          0
+        ],
+        [
+          713,
+          920,
+          713,
+          698,
+          78
+        ],
+        [
+          721,
+          920,
+          721,
+          698,
+          129
+        ],
+        [
+          728,
+          920,
+          728,
+          698,
+          211
+        ],
+        [
+          736,
+          920,
+          736,
+          698,
+          233
+        ],
+        [
+          743,
+          920,
+          743,
+          698,
+          301
+        ],
+        [
+          751,
+          920,
+          751,
+          698,
+          351
+        ],
+        [
+          758,
+          920,
+          758,
+          698,
+          441
+        ],
+        [
+          766,
+          920,
+          766,
+          698,
+          515
+        ],
+        [
+          773,
+          920,
+          773,
+          698,
+          599
+        ],
+        [
+          781,
+          920,
+          781,
+          698,
+          672
+        ],
+        [
+          788,
+          920,
+          788,
+          698,
+          695
+        ],
+        [
+          795,
+          920,
+          795,
+          698,
+          791
+        ],
+        [
+          803,
+          920,
+          803,
+          698,
+          855
+        ],
+        [
+          810,
+          920,
+          810,
+          698,
+          934
+        ],
+        [
+          818,
+          920,
+          818,
+          698,
+          984
+        ],
+        [
+          825,
+          920,
+          825,
+          698,
+          1043
+        ],
+        [
+          833,
+          920,
+          833,
+          698,
+          1109
+        ],
+        [
+          840,
+          920,
+          840,
+          698,
+          1134
+        ],
+        [
+          848,
+          920,
+          848,
+          698,
+          1198
+        ],
+        [
+          855,
+          920,
+          855,
+          698,
+          1255
+        ],
+        [
+          863,
+          920,
+          863,
+          698,
+          1283
+        ],
+        [
+          870,
+          920,
+          870,
+          698,
+          1348
+        ]
+      ]
+    }
+  ]
+}
+============================================================
+[8] /check 鎻愪氦鎽樿:
+{
+  "request_fields": {
+    "si": {
+      "len": 91,
+      "prefix": "PtfIOwAB"
+    },
+    "lang": {
+      "len": 1,
+      "prefix": "1"
+    },
+    "tk": {
+      "len": 3164,
+      "prefix": "AwPFCUCx"
+    },
+    "ct": {
+      "len": 1948,
+      "prefix": "AwPFBbDu"
+    },
+    "cs": {
+      "len": 1543,
+      "prefix": "AwPFBIAp"
+    },
+    "version": {
+      "len": 1,
+      "prefix": "3"
+    },
+    "client": {
+      "len": 2,
+      "prefix": "pc"
+    }
+  },
+  "response": {
+    "st": "TUNqHuryx64aEzGE",
+    "code": 16807,
+    "s_code": 16130,
+    "msg": "楠岃瘉澶辫触锛岃閲嶆柊楠岃瘉"
+  }
+}
+[鉁揮 椤靛唴 WASM 宸茬敓鎴?AwPF tk/ct(/cs) 鈥?k鈫抔etTK / x鈫抔etCTData锛堣ˉ鐜娌跨敤 /fp 缁撹锛?[鉁揮 /check 鍝嶅簲 code=16807 tp=undefined msg=楠岃瘉澶辫触锛岃閲嶆柊楠岃瘉
+[!] 缂哄彛/杞ㄨ抗鏈繃椋庢帶锛堝姞瀵嗛摼璺凡閫氾紝鍙皟 offset 鎴栭噸璇曪級
+[鉁揮 缁撴灉宸插啓鍏?F:\AICode\閫嗗悜宸ュ叿\crypto-hunter-lite\cases\jd_giftcard_jcap\repro_check_result.json
+[鉁揮 CDP 杩炴帴宸叉柇寮€锛堝閮ㄦ祻瑙堝櫒淇濈暀锛?
+--- ROUND 1 鎽樿: {"round":1,"bias":0,"bestX":161,"offsetCss":null,"code":16807,"exit":3}
+
+========== ROUND 2/5  GAP_BIAS=3 ==========
+
+============================================================
+[1] 鍔犺浇 jd_cookies.json ...
+[鉁揮 Cookie 闀垮害: 2310
+[2] 鍚姩 CDP-attach http://127.0.0.1:9222 Blink: http://127.0.0.1:9222
+[鉁揮 CDP attach pages=1 url=https://mygiftcard.jd.com/giftcard/myGiftCardInit.action
+[3] 鎵撳紑绀煎搧鍗￠〉...
+[鉁揮 宸插湪鐩爣椤? https://mygiftcard.jd.com/giftcard/myGiftCardInit.action
+[4] 濉崱鍙峰苟鐐瑰嚮绔嬪嵆缁戝畾 鈫?瑙﹀彂 /fp WASM(AwPF)...
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=FyxJ7wABAAAGeIBPuR4AMCy0XZe7ic39AxYqRE2-47QIxHBMys_WNajlaefJf3olBeFoPrvUyE09OUHcbzf7mwAAAAA&interfaceId=268435458&fp=bh
+[NET] /check POST fields={"si":{"len":91,"prefix":"FyxJ7wAB"},"lang":{"len":1,"prefix":"1"},"tk":{"len":2098,"prefix":"AwPFBiA_"},"ct":{"len":1948,"prefix":"AwPFBbBi"},"cs":{"len":1543,"prefix":"AwPFBIAw"},"version":{"len":1,"prefix":"3"},"client":{"len":2,"prefix":"pc"}}
+[鉁揮 /fp ct鍓嶇紑=AwPF code=0 st=Bdk3DPV1mbHWA5HT
+[5] 绛夊緟 /check tp=30 鎷煎浘鍥惧寘...
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=FyxJ7wABAAAGeIBPuR4AMCy0XZe7ic39AxYqRE2-47QIxHBMys_WNajlaefJf3olBeFoPrvUyE09OUHcbzf7mwAAAAA&interfaceId=268435460&fp=bh
+[NET] /check RESP code=0 tp=30 st=0ncFhTSHzAgigIqA
+[NET] sgm POST (ignored telemetry)
+[5b] captcha layout:
+{
+  "imgs": [
+    {
+      "w": 14,
+      "h": 14,
+      "nw": 96,
+      "nh": 96,
+      "cls": ""
+    },
+    {
+      "w": 14,
+      "h": 14,
+      "nw": 32,
+      "nh": 32,
+      "cls": ""
+    },
+    {
+      "w": 0,
+      "h": 0,
+      "nw": 40,
+      "nh": 40,
+      "cls": "img_tips"
+    },
+    {
+      "w": 271.2708435058594,
+      "h": 167.6875,
+      "nw": 275,
+      "nh": 170,
+      "cls": ""
+    },
+    {
+      "w": 64.11458587646484,
+      "h": 167.6875,
+      "nw": 65,
+      "nh": 170,
+      "cls": ""
+    },
+    {
+      "w": 48,
+      "h": 48,
+      "nw": 96,
+      "nh": 96,
+      "cls": "move-img"
+    },
+    {
+      "w": 0,
+      "h": 0,
+      "nw": 200,
+      "nh": 200,
+      "cls": "feedback_arrow"
+    }
+  ],
+  "imgW": 271.2708435058594,
+  "imgH": 167.6875,
+  "imgNatural": [
+    275,
+    170
+  ],
+  "handle": {
+    "x": 681.6979370117188,
+    "y": 673.6875,
+    "width": 48,
+    "height": 48,
+    "top": 673.6875,
+    "right": 729.6979370117188,
+    "bottom": 721.6875,
+    "left": 681.6979370117188
+  },
+  "trackW": 271.2708435058594
+}
+[6a] gap JS:
+{
+  "ok": true,
+  "bestX": 151,
+  "offsetCss": 8,
+  "scale": 0.05090909090909091,
+  "bg": [
+    275,
+    170
+  ],
+  "piece": [
+    65,
+    170
+  ],
+  "pieceBox": [
+    14,
+    88,
+    56,
+    132
+  ],
+  "score": 9966.742468872071,
+  "source": "check_img_b1_b2"
+}
+[6b] gap OpenCV:
+{
+  "ok": true,
+  "bestX": 163,
+  "bestY": 86,
+  "score": 0.3727249503135681,
+  "votes": [
+    {
+      "method": "TM_CCORR_NORMED_edge",
+      "x": 163,
+      "y": 86,
+      "score": 0.3727249503135681
+    },
+    {
+      "method": "TM_CCOEFF_NORMED_edge",
+      "x": 163,
+      "y": 86,
+      "score": 0.28142082691192627
+    },
+    {
+      "method": "TM_CCORR_NORMED_gray",
+      "x": 163,
+      "y": 86,
+      "score": 0.8368895649909973
+    },
+    {
+      "method": "TM_CCOEFF_NORMED_gray",
+      "x": 163,
+      "y": 86,
+      "score": 0.6003624796867371
+    },
+    {
+      "method": "TM_SQDIFF_NORMED_gray",
+      "x": 163,
+      "y": 86,
+      "score": 0.6422007083892822
+    },
+    {
+      "method": "white_outline",
+      "x": 251,
+      "y": 86,
+      "score": 196.40425531914894
+    }
+  ],
+  "band": [
+    74,
+    145
+  ],
+  "bg": [
+    275,
+    170
+  ],
+  "piece": [
+    65,
+    170
+  ],
+  "pieceBox": [
+    12,
+    86,
+    58,
+    132
+  ],
+  "cropOffsetX": 12,
+  "source": "opencv_multi"
+}
+[6c] 宸蹭繚瀛?b1/b2 鍒?debug/
+[6] 缂哄彛閫夌敤:
+{
+  "source": "opencv_multi",
+  "bestX": 163,
+  "offsetCss": 161,
+  "scale": 0.9864394309303978,
+  "trackW": 271.2708435058594
+}
+[6d] 缂哄彛鏍℃ GAP_BIAS=3 鈫?offsetCss=164
+[7] 鎷熶汉鎷栧姩 .move-img offsetX=164 (bestX=163, scale=0.9864394309303978, trackW=271.2708435058594) ...
+>>> 璇风湅灞忓箷锛氬嵆灏嗘嫋鍒?offset=164px锛坆estX=163 bias=3锛夛紝3000ms 鍚庡紑濮嬫嫋
+[6.5] 娉ㄥ叆鍚堟垚 touche_message:
+{
+  "synthLen": 1384,
+  "synthSample": [
+    {
+      "did": "",
+      "cn": "",
+      "sx": 84,
+      "sy": 612,
+      "px": 84,
+      "py": 612,
+      "time": 1785481661767,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 1271,
+      "sy": 106,
+      "px": 1271,
+      "py": 106,
+      "time": 1785481662167,
+      "type": "click"
+    }
+  ]
+}
+[7a] sample track n=25 totalDt=7803 endX=164
+>>> 鎷栧畬浜嗭紝璇风湅鎷煎浘鍧楁槸鍚﹀鍑嗙己鍙ｏ紙鍋?3000ms 鍐嶈缁撴灉锛?[NET] /check POST fields={"si":{"len":91,"prefix":"FyxJ7wAB"},"lang":{"len":1,"prefix":"1"},"tk":{"len":3143,"prefix":"AwPFCTAg"},"ct":{"len":1948,"prefix":"AwPFBbBo"},"cs":{"len":1522,"prefix":"AwPFBHAq"},"version":{"len":1,"prefix":"3"},"client":{"len":2,"prefix":"pc"}}
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=FyxJ7wABAAAGeIBPuR4AMCy0XZe7ic39AxYqRE2-47QIxHBMys_WNajlaefJf3olBeFoPrvUyE09OUHcbzf7mwAAAAA&interfaceId=268435460&fp=bh
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=FyxJ7wABAAAGeIBPuR4AMCy0XZe7ic39AxYqRE2-47QIxHBMys_WNajlaefJf3olBeFoPrvUyE09OUHcbzf7mwAAAAA&interfaceId=268435459&fp=bh
+[NET] /check RESP code=16807 tp=undefined st=b7m2omr7e6ZhOTIG
+[NET] sgm POST (ignored telemetry)
+[7c] runtime xyList:
+{
+  "n": -1
+}
+[7b] drag done:
+{
+  "mode": "sample",
+  "n": 25,
+  "endX": 164
+}
+[7d] 瀹為檯鎻愪氦 f.touchList:
+{
+  "touchListLen": 10,
+  "touchList": [
+    {
+      "did": "",
+      "cn": "",
+      "sx": 84,
+      "sy": 612,
+      "px": 84,
+      "py": 612,
+      "time": 1785481661767,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 1271,
+      "sy": 106,
+      "px": 1271,
+      "py": 106,
+      "time": 1785481662167,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 158,
+      "sy": 436,
+      "px": 158,
+      "py": 436,
+      "time": 1785481662567,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 634,
+      "sy": 758,
+      "px": 634,
+      "py": 758,
+      "time": 1785481662967,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 883,
+      "sy": 377,
+      "px": 883,
+      "py": 377,
+      "time": 1785481663367,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 163,
+      "sy": 659,
+      "px": 163,
+      "py": 659,
+      "time": 1785481663767,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 289,
+      "sy": 356,
+      "px": 289,
+      "py": 356,
+      "time": 1785481664167,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 1176,
+      "sy": 670,
+      "px": 1176,
+      "py": 670,
+      "time": 1785481664567,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 303,
+      "sy": 308,
+      "px": 303,
+      "py": 308,
+      "time": 1785481664967,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "move-img",
+      "time": 1785481665367,
+      "pt": [
+        [
+          706,
+          920,
+          706,
+          698,
+          0
+        ],
+        [
+          713,
+          920,
+          713,
+          698,
+          77
+        ],
+        [
+          721,
+          920,
+          721,
+          698,
+          174
+        ],
+        [
+          728,
+          920,
+          728,
+          698,
+          236
+        ],
+        [
+          736,
+          920,
+          736,
+          698,
+          314
+        ],
+        [
+          743,
+          920,
+          743,
+          698,
+          368
+        ],
+        [
+          751,
+          920,
+          751,
+          698,
+          395
+        ],
+        [
+          758,
+          920,
+          758,
+          698,
+          427
+        ],
+        [
+          766,
+          920,
+          766,
+          698,
+          474
+        ],
+        [
+          773,
+          920,
+          773,
+          698,
+          526
+        ],
+        [
+          781,
+          920,
+          781,
+          698,
+          561
+        ],
+        [
+          788,
+          920,
+          788,
+          698,
+          631
+        ],
+        [
+          795,
+          920,
+          795,
+          698,
+          652
+        ],
+        [
+          803,
+          920,
+          803,
+          698,
+          727
+        ],
+        [
+          810,
+          920,
+          810,
+          698,
+          799
+        ],
+        [
+          818,
+          920,
+          818,
+          698,
+          836
+        ],
+        [
+          825,
+          920,
+          825,
+          698,
+          866
+        ],
+        [
+          833,
+          920,
+          833,
+          698,
+          900
+        ],
+        [
+          840,
+          920,
+          840,
+          698,
+          983
+        ],
+        [
+          848,
+          920,
+          848,
+          698,
+          1077
+        ],
+        [
+          855,
+          920,
+          855,
+          698,
+          1172
+        ],
+        [
+          863,
+          920,
+          863,
+          698,
+          1256
+        ],
+        [
+          870,
+          920,
+          870,
+          698,
+          1310
+        ]
+      ]
+    }
+  ]
+}
+============================================================
+[8] /check 鎻愪氦鎽樿:
+{
+  "request_fields": {
+    "si": {
+      "len": 91,
+      "prefix": "FyxJ7wAB"
+    },
+    "lang": {
+      "len": 1,
+      "prefix": "1"
+    },
+    "tk": {
+      "len": 3143,
+      "prefix": "AwPFCTAg"
+    },
+    "ct": {
+      "len": 1948,
+      "prefix": "AwPFBbBo"
+    },
+    "cs": {
+      "len": 1522,
+      "prefix": "AwPFBHAq"
+    },
+    "version": {
+      "len": 1,
+      "prefix": "3"
+    },
+    "client": {
+      "len": 2,
+      "prefix": "pc"
+    }
+  },
+  "response": {
+    "st": "b7m2omr7e6ZhOTIG",
+    "code": 16807,
+    "s_code": 16130,
+    "msg": "楠岃瘉澶辫触锛岃閲嶆柊楠岃瘉"
+  }
+}
+[鉁揮 椤靛唴 WASM 宸茬敓鎴?AwPF tk/ct(/cs) 鈥?k鈫抔etTK / x鈫抔etCTData锛堣ˉ鐜娌跨敤 /fp 缁撹锛?[鉁揮 /check 鍝嶅簲 code=16807 tp=undefined msg=楠岃瘉澶辫触锛岃閲嶆柊楠岃瘉
+[!] 缂哄彛/杞ㄨ抗鏈繃椋庢帶锛堝姞瀵嗛摼璺凡閫氾紝鍙皟 offset 鎴栭噸璇曪級
+[鉁揮 缁撴灉宸插啓鍏?F:\AICode\閫嗗悜宸ュ叿\crypto-hunter-lite\cases\jd_giftcard_jcap\repro_check_result.json
+[鉁揮 CDP 杩炴帴宸叉柇寮€锛堝閮ㄦ祻瑙堝櫒淇濈暀锛?
+--- ROUND 2 鎽樿: {"round":2,"bias":3,"bestX":151,"offsetCss":164,"code":16807,"exit":3}
+
+========== ROUND 3/5  GAP_BIAS=-3 ==========
+
+============================================================
+[1] 鍔犺浇 jd_cookies.json ...
+[鉁揮 Cookie 闀垮害: 2310
+[2] 鍚姩 CDP-attach http://127.0.0.1:9222 Blink: http://127.0.0.1:9222
+[鉁揮 CDP attach pages=1 url=https://mygiftcard.jd.com/giftcard/myGiftCardInit.action
+[3] 鎵撳紑绀煎搧鍗￠〉...
+[鉁揮 宸插湪鐩爣椤? https://mygiftcard.jd.com/giftcard/myGiftCardInit.action
+[4] 濉崱鍙峰苟鐐瑰嚮绔嬪嵆缁戝畾 鈫?瑙﹀彂 /fp WASM(AwPF)...
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=A0UG0QABAAABZy7IT_oAMD11cNNIXmvqtoRkmWmJ85nJrkwipmlYOWFm092gT99TNZlA5Z-wo20hohnOgW9FfQAAAAA&interfaceId=268435458&fp=bh
+[NET] /check POST fields={"si":{"len":91,"prefix":"A0UG0QAB"},"lang":{"len":1,"prefix":"1"},"tk":{"len":2098,"prefix":"AwPFBiAf"},"ct":{"len":1948,"prefix":"AwPFBbA4"},"cs":{"len":1543,"prefix":"AwPFBIDM"},"version":{"len":1,"prefix":"3"},"client":{"len":2,"prefix":"pc"}}
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=A0UG0QABAAABZy7IT_oAMD11cNNIXmvqtoRkmWmJ85nJrkwipmlYOWFm092gT99TNZlA5Z-wo20hohnOgW9FfQAAAAA&interfaceId=268435460&fp=bh
+[NET] /check RESP code=0 tp=30 st=5EHooDQdO3VFwyI8
+[鉁揮 /fp ct鍓嶇紑=AwPF code=0 st=hNSonh1XqKmnVcbY
+[5] 绛夊緟 /check tp=30 鎷煎浘鍥惧寘...
+[NET] sgm POST (ignored telemetry)
+[5b] captcha layout:
+{
+  "imgs": [
+    {
+      "w": 14,
+      "h": 14,
+      "nw": 96,
+      "nh": 96,
+      "cls": ""
+    },
+    {
+      "w": 14,
+      "h": 14,
+      "nw": 32,
+      "nh": 32,
+      "cls": ""
+    },
+    {
+      "w": 0,
+      "h": 0,
+      "nw": 40,
+      "nh": 40,
+      "cls": "img_tips"
+    },
+    {
+      "w": 271.2708435058594,
+      "h": 167.6875,
+      "nw": 275,
+      "nh": 170,
+      "cls": ""
+    },
+    {
+      "w": 64.11458587646484,
+      "h": 167.6875,
+      "nw": 65,
+      "nh": 170,
+      "cls": ""
+    },
+    {
+      "w": 48,
+      "h": 48,
+      "nw": 96,
+      "nh": 96,
+      "cls": "move-img"
+    },
+    {
+      "w": 0,
+      "h": 0,
+      "nw": 200,
+      "nh": 200,
+      "cls": "feedback_arrow"
+    }
+  ],
+  "imgW": 271.2708435058594,
+  "imgH": 167.6875,
+  "imgNatural": [
+    275,
+    170
+  ],
+  "handle": {
+    "x": 681.6979370117188,
+    "y": 673.6875,
+    "width": 48,
+    "height": 48,
+    "top": 673.6875,
+    "right": 729.6979370117188,
+    "bottom": 721.6875,
+    "left": 681.6979370117188
+  },
+  "trackW": 271.2708435058594
+}
+[6a] gap JS:
+{
+  "ok": true,
+  "bestX": 141,
+  "offsetCss": 7,
+  "scale": 0.05090909090909091,
+  "bg": [
+    275,
+    170
+  ],
+  "piece": [
+    65,
+    170
+  ],
+  "pieceBox": [
+    14,
+    25,
+    56,
+    74
+  ],
+  "score": 11538.03461517334,
+  "source": "check_img_b1_b2"
+}
+[6b] gap OpenCV:
+{
+  "ok": true,
+  "bestX": 209,
+  "bestY": 23,
+  "score": 0.5247336626052856,
+  "votes": [
+    {
+      "method": "TM_CCORR_NORMED_edge",
+      "x": 209,
+      "y": 23,
+      "score": 0.5247336626052856
+    },
+    {
+      "method": "TM_CCOEFF_NORMED_edge",
+      "x": 209,
+      "y": 23,
+      "score": 0.45171505212783813
+    },
+    {
+      "method": "TM_SQDIFF_NORMED_edge",
+      "x": 209,
+      "y": 23,
+      "score": 0.041918814182281494
+    },
+    {
+      "method": "TM_CCORR_NORMED_gray",
+      "x": 115,
+      "y": 3,
+      "score": 0.8170928359031677
+    },
+    {
+      "method": "TM_CCOEFF_NORMED_gray",
+      "x": 115,
+      "y": 3,
+      "score": 0.30707961320877075
+    },
+    {
+      "method": "TM_SQDIFF_NORMED_gray",
+      "x": 115,
+      "y": 3,
+      "score": 0.6339066028594971
+    },
+    {
+      "method": "white_outline",
+      "x": 151,
+      "y": 23,
+      "score": 78.38888888888889
+    }
+  ],
+  "band": [
+    11,
+    89
+  ],
+  "bg": [
+    275,
+    170
+  ],
+  "piece": [
+    65,
+    170
+  ],
+  "pieceBox": [
+    12,
+    23,
+    58,
+    76
+  ],
+  "cropOffsetX": 12,
+  "source": "opencv_multi"
+}
+[6c] 宸蹭繚瀛?b1/b2 鍒?debug/
+[6] 缂哄彛閫夌敤:
+{
+  "source": "opencv_multi",
+  "bestX": 209,
+  "offsetCss": 206,
+  "scale": 0.9864394309303978,
+  "trackW": 271.2708435058594
+}
+[6d] 缂哄彛鏍℃ GAP_BIAS=-3 鈫?offsetCss=203
+[7] 鎷熶汉鎷栧姩 .move-img offsetX=203 (bestX=209, scale=0.9864394309303978, trackW=271.2708435058594) ...
+>>> 璇风湅灞忓箷锛氬嵆灏嗘嫋鍒?offset=203px锛坆estX=209 bias=-3锛夛紝3000ms 鍚庡紑濮嬫嫋
+[NET] sgm POST (ignored telemetry)
+[NET] sgm POST (ignored telemetry)
+[6.5] 娉ㄥ叆鍚堟垚 touche_message:
+{
+  "synthLen": 1385,
+  "synthSample": [
+    {
+      "did": "",
+      "cn": "",
+      "sx": 547,
+      "sy": 311,
+      "px": 547,
+      "py": 311,
+      "time": 1785481693402,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 426,
+      "sy": 370,
+      "px": 426,
+      "py": 370,
+      "time": 1785481693802,
+      "type": "click"
+    }
+  ]
+}
+[7a] sample track n=25 totalDt=7803 endX=203
+[NET] sgm POST (ignored telemetry)
+>>> 鎷栧畬浜嗭紝璇风湅鎷煎浘鍧楁槸鍚﹀鍑嗙己鍙ｏ紙鍋?3000ms 鍐嶈缁撴灉锛?[NET] /check POST fields={"si":{"len":91,"prefix":"A0UG0QAB"},"lang":{"len":1,"prefix":"1"},"tk":{"len":3207,"prefix":"AwPFCWAI"},"ct":{"len":1948,"prefix":"AwPFBbCy"},"cs":{"len":1543,"prefix":"AwPFBICx"},"version":{"len":1,"prefix":"3"},"client":{"len":2,"prefix":"pc"}}
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=A0UG0QABAAABZy7IT_oAMD11cNNIXmvqtoRkmWmJ85nJrkwipmlYOWFm092gT99TNZlA5Z-wo20hohnOgW9FfQAAAAA&interfaceId=268435460&fp=bh
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=A0UG0QABAAABZy7IT_oAMD11cNNIXmvqtoRkmWmJ85nJrkwipmlYOWFm092gT99TNZlA5Z-wo20hohnOgW9FfQAAAAA&interfaceId=268435459&fp=bh
+[NET] /check RESP code=16807 tp=undefined st=RWaf5aSQ71byhGhN
+[NET] sgm POST (ignored telemetry)
+[7c] runtime xyList:
+{
+  "n": -1
+}
+[7b] drag done:
+{
+  "mode": "sample",
+  "n": 25,
+  "endX": 203
+}
+[7d] 瀹為檯鎻愪氦 f.touchList:
+{
+  "touchListLen": 10,
+  "touchList": [
+    {
+      "did": "",
+      "cn": "",
+      "sx": 547,
+      "sy": 311,
+      "px": 547,
+      "py": 311,
+      "time": 1785481693402,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 426,
+      "sy": 370,
+      "px": 426,
+      "py": 370,
+      "time": 1785481693802,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 909,
+      "sy": 256,
+      "px": 909,
+      "py": 256,
+      "time": 1785481694202,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 1257,
+      "sy": 650,
+      "px": 1257,
+      "py": 650,
+      "time": 1785481694602,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 903,
+      "sy": 160,
+      "px": 903,
+      "py": 160,
+      "time": 1785481695002,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 412,
+      "sy": 255,
+      "px": 412,
+      "py": 255,
+      "time": 1785481695402,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 386,
+      "sy": 245,
+      "px": 386,
+      "py": 245,
+      "time": 1785481695802,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 326,
+      "sy": 304,
+      "px": 326,
+      "py": 304,
+      "time": 1785481696202,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 646,
+      "sy": 710,
+      "px": 646,
+      "py": 710,
+      "time": 1785481696602,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "move-img",
+      "time": 1785481697002,
+      "pt": [
+        [
+          706,
+          920,
+          706,
+          698,
+          0
+        ],
+        [
+          715,
+          920,
+          715,
+          698,
+          43
+        ],
+        [
+          724,
+          920,
+          724,
+          698,
+          110
+        ],
+        [
+          734,
+          920,
+          734,
+          698,
+          207
+        ],
+        [
+          743,
+          920,
+          743,
+          698,
+          231
+        ],
+        [
+          752,
+          920,
+          752,
+          698,
+          272
+        ],
+        [
+          761,
+          920,
+          761,
+          698,
+          315
+        ],
+        [
+          771,
+          920,
+          771,
+          698,
+          347
+        ],
+        [
+          780,
+          920,
+          780,
+          698,
+          412
+        ],
+        [
+          789,
+          920,
+          789,
+          698,
+          503
+        ],
+        [
+          798,
+          920,
+          798,
+          698,
+          552
+        ],
+        [
+          808,
+          920,
+          808,
+          698,
+          648
+        ],
+        [
+          817,
+          920,
+          817,
+          698,
+          683
+        ],
+        [
+          826,
+          920,
+          826,
+          698,
+          714
+        ],
+        [
+          835,
+          920,
+          835,
+          698,
+          738
+        ],
+        [
+          844,
+          920,
+          844,
+          698,
+          828
+        ],
+        [
+          854,
+          920,
+          854,
+          698,
+          920
+        ],
+        [
+          863,
+          920,
+          863,
+          698,
+          991
+        ],
+        [
+          872,
+          920,
+          872,
+          698,
+          1070
+        ],
+        [
+          881,
+          920,
+          881,
+          698,
+          1136
+        ],
+        [
+          891,
+          920,
+          891,
+          698,
+          1172
+        ],
+        [
+          900,
+          920,
+          900,
+          698,
+          1270
+        ],
+        [
+          909,
+          920,
+          909,
+          698,
+          1342
+        ]
+      ]
+    }
+  ]
+}
+============================================================
+[8] /check 鎻愪氦鎽樿:
+{
+  "request_fields": {
+    "si": {
+      "len": 91,
+      "prefix": "A0UG0QAB"
+    },
+    "lang": {
+      "len": 1,
+      "prefix": "1"
+    },
+    "tk": {
+      "len": 3207,
+      "prefix": "AwPFCWAI"
+    },
+    "ct": {
+      "len": 1948,
+      "prefix": "AwPFBbCy"
+    },
+    "cs": {
+      "len": 1543,
+      "prefix": "AwPFBICx"
+    },
+    "version": {
+      "len": 1,
+      "prefix": "3"
+    },
+    "client": {
+      "len": 2,
+      "prefix": "pc"
+    }
+  },
+  "response": {
+    "st": "RWaf5aSQ71byhGhN",
+    "code": 16807,
+    "s_code": 16130,
+    "msg": "楠岃瘉澶辫触锛岃閲嶆柊楠岃瘉"
+  }
+}
+[鉁揮 椤靛唴 WASM 宸茬敓鎴?AwPF tk/ct(/cs) 鈥?k鈫抔etTK / x鈫抔etCTData锛堣ˉ鐜娌跨敤 /fp 缁撹锛?[鉁揮 /check 鍝嶅簲 code=16807 tp=undefined msg=楠岃瘉澶辫触锛岃閲嶆柊楠岃瘉
+[!] 缂哄彛/杞ㄨ抗鏈繃椋庢帶锛堝姞瀵嗛摼璺凡閫氾紝鍙皟 offset 鎴栭噸璇曪級
+[鉁揮 缁撴灉宸插啓鍏?F:\AICode\閫嗗悜宸ュ叿\crypto-hunter-lite\cases\jd_giftcard_jcap\repro_check_result.json
+[鉁揮 CDP 杩炴帴宸叉柇寮€锛堝閮ㄦ祻瑙堝櫒淇濈暀锛?
+--- ROUND 3 鎽樿: {"round":3,"bias":-3,"bestX":141,"offsetCss":203,"code":16807,"exit":3}
+
+========== ROUND 4/5  GAP_BIAS=6 ==========
+
+============================================================
+[1] 鍔犺浇 jd_cookies.json ...
+[鉁揮 Cookie 闀垮害: 2310
+[2] 鍚姩 CDP-attach http://127.0.0.1:9222 Blink: http://127.0.0.1:9222
+[鉁揮 CDP attach pages=1 url=https://mygiftcard.jd.com/giftcard/myGiftCardInit.action
+[3] 鎵撳紑绀煎搧鍗￠〉...
+[鉁揮 宸插湪鐩爣椤? https://mygiftcard.jd.com/giftcard/myGiftCardInit.action
+[4] 濉崱鍙峰苟鐐瑰嚮绔嬪嵆缁戝畾 鈫?瑙﹀彂 /fp WASM(AwPF)...
+[NET] sgm POST (ignored telemetry)
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=D6XjhAABAAAFSQrwcxEAME5qZZ33R8d43-vXPcJJj6srSVTtaO8bMj71SEr9FP3lE_oTwT1xuVvVjcd7sjryZgAAAAA&interfaceId=268435458&fp=bh
+[NET] /check POST fields={"si":{"len":91,"prefix":"D6XjhAAB"},"lang":{"len":1,"prefix":"1"},"tk":{"len":2098,"prefix":"AwPFBiAI"},"ct":{"len":1948,"prefix":"AwPFBbBx"},"cs":{"len":1543,"prefix":"AwPFBIA8"},"version":{"len":1,"prefix":"3"},"client":{"len":2,"prefix":"pc"}}
+[鉁揮 /fp ct鍓嶇紑=AwPF code=0 st=91BJ3mW7LSkGnvIH
+[5] 绛夊緟 /check tp=30 鎷煎浘鍥惧寘...
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=D6XjhAABAAAFSQrwcxEAME5qZZ33R8d43-vXPcJJj6srSVTtaO8bMj71SEr9FP3lE_oTwT1xuVvVjcd7sjryZgAAAAA&interfaceId=268435460&fp=bh
+[NET] /check RESP code=0 tp=30 st=kRkKUZtWMArUMDhr
+[NET] sgm POST (ignored telemetry)
+[5b] captcha layout:
+{
+  "imgs": [
+    {
+      "w": 14,
+      "h": 14,
+      "nw": 96,
+      "nh": 96,
+      "cls": ""
+    },
+    {
+      "w": 14,
+      "h": 14,
+      "nw": 32,
+      "nh": 32,
+      "cls": ""
+    },
+    {
+      "w": 0,
+      "h": 0,
+      "nw": 40,
+      "nh": 40,
+      "cls": "img_tips"
+    },
+    {
+      "w": 271.2708435058594,
+      "h": 167.6875,
+      "nw": 275,
+      "nh": 170,
+      "cls": ""
+    },
+    {
+      "w": 64.11458587646484,
+      "h": 167.6875,
+      "nw": 65,
+      "nh": 170,
+      "cls": ""
+    },
+    {
+      "w": 48,
+      "h": 48,
+      "nw": 96,
+      "nh": 96,
+      "cls": "move-img"
+    },
+    {
+      "w": 0,
+      "h": 0,
+      "nw": 200,
+      "nh": 200,
+      "cls": "feedback_arrow"
+    }
+  ],
+  "imgW": 271.2708435058594,
+  "imgH": 167.6875,
+  "imgNatural": [
+    275,
+    170
+  ],
+  "handle": {
+    "x": 681.6979370117188,
+    "y": 673.6875,
+    "width": 48,
+    "height": 48,
+    "top": 673.6875,
+    "right": 729.6979370117188,
+    "bottom": 721.6875,
+    "left": 681.6979370117188
+  },
+  "trackW": 271.2708435058594
+}
+[6a] gap JS:
+{
+  "ok": true,
+  "bestX": 130,
+  "offsetCss": 7,
+  "scale": 0.05090909090909091,
+  "bg": [
+    275,
+    170
+  ],
+  "piece": [
+    65,
+    170
+  ],
+  "pieceBox": [
+    14,
+    111,
+    56,
+    148
+  ],
+  "score": 8821.550476074219,
+  "source": "check_img_b1_b2"
+}
+[6b] gap OpenCV:
+{
+  "ok": true,
+  "bestX": 141,
+  "bestY": 109,
+  "score": 0.5427784323692322,
+  "votes": [
+    {
+      "method": "TM_CCORR_NORMED_edge",
+      "x": 142,
+      "y": 109,
+      "score": 0.5427784323692322
+    },
+    {
+      "method": "TM_CCOEFF_NORMED_edge",
+      "x": 142,
+      "y": 109,
+      "score": 0.42206910252571106
+    },
+    {
+      "method": "TM_SQDIFF_NORMED_edge",
+      "x": 142,
+      "y": 109,
+      "score": 0.07676935195922852
+    },
+    {
+      "method": "TM_CCORR_NORMED_gray",
+      "x": 205,
+      "y": 31,
+      "score": 0.8721569776535034
+    },
+    {
+      "method": "TM_CCOEFF_NORMED_gray",
+      "x": 142,
+      "y": 109,
+      "score": 0.4444124102592468
+    },
+    {
+      "method": "TM_SQDIFF_NORMED_gray",
+      "x": 166,
+      "y": 69,
+      "score": 0.7068941593170166
+    },
+    {
+      "method": "white_outline",
+      "x": 141,
+      "y": 109,
+      "score": 82.875
+    }
+  ],
+  "band": [
+    97,
+    161
+  ],
+  "bg": [
+    275,
+    170
+  ],
+  "piece": [
+    65,
+    170
+  ],
+  "pieceBox": [
+    12,
+    109,
+    58,
+    148
+  ],
+  "cropOffsetX": 12,
+  "source": "opencv_multi"
+}
+[6c] 宸蹭繚瀛?b1/b2 鍒?debug/
+[6] 缂哄彛閫夌敤:
+{
+  "source": "opencv_multi",
+  "bestX": 141,
+  "offsetCss": 139,
+  "scale": 0.9864394309303978,
+  "trackW": 271.2708435058594
+}
+[6d] 缂哄彛鏍℃ GAP_BIAS=6 鈫?offsetCss=145
+[7] 鎷熶汉鎷栧姩 .move-img offsetX=145 (bestX=141, scale=0.9864394309303978, trackW=271.2708435058594) ...
+>>> 璇风湅灞忓箷锛氬嵆灏嗘嫋鍒?offset=145px锛坆estX=141 bias=6锛夛紝3000ms 鍚庡紑濮嬫嫋
+[6.5] 娉ㄥ叆鍚堟垚 touche_message:
+{
+  "synthLen": 1385,
+  "synthSample": [
+    {
+      "did": "",
+      "cn": "",
+      "sx": 1099,
+      "sy": 98,
+      "px": 1099,
+      "py": 98,
+      "time": 1785481727186,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 86,
+      "sy": 359,
+      "px": 86,
+      "py": 359,
+      "time": 1785481727586,
+      "type": "click"
+    }
+  ]
+}
+[7a] sample track n=25 totalDt=7803 endX=145
+>>> 鎷栧畬浜嗭紝璇风湅鎷煎浘鍧楁槸鍚﹀鍑嗙己鍙ｏ紙鍋?3000ms 鍐嶈缁撴灉锛?[NET] /check POST fields={"si":{"len":91,"prefix":"D6XjhAAB"},"lang":{"len":1,"prefix":"1"},"tk":{"len":3186,"prefix":"AwPFCVBh"},"ct":{"len":1948,"prefix":"AwPFBbBU"},"cs":{"len":1500,"prefix":"AwPFBGBu"},"version":{"len":1,"prefix":"3"},"client":{"len":2,"prefix":"pc"}}
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=D6XjhAABAAAFSQrwcxEAME5qZZ33R8d43-vXPcJJj6srSVTtaO8bMj71SEr9FP3lE_oTwT1xuVvVjcd7sjryZgAAAAA&interfaceId=268435460&fp=bh
+[NET] /check RESP code=16807 tp=undefined st=FWIvvi0aGWGBW1Vd
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=D6XjhAABAAAFSQrwcxEAME5qZZ33R8d43-vXPcJJj6srSVTtaO8bMj71SEr9FP3lE_oTwT1xuVvVjcd7sjryZgAAAAA&interfaceId=268435459&fp=bh
+[NET] sgm POST (ignored telemetry)
+[7c] runtime xyList:
+{
+  "n": -1
+}
+[7b] drag done:
+{
+  "mode": "sample",
+  "n": 25,
+  "endX": 145
+}
+[7d] 瀹為檯鎻愪氦 f.touchList:
+{
+  "touchListLen": 10,
+  "touchList": [
+    {
+      "did": "",
+      "cn": "",
+      "sx": 1099,
+      "sy": 98,
+      "px": 1099,
+      "py": 98,
+      "time": 1785481727186,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 86,
+      "sy": 359,
+      "px": 86,
+      "py": 359,
+      "time": 1785481727586,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 147,
+      "sy": 269,
+      "px": 147,
+      "py": 269,
+      "time": 1785481727986,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 1040,
+      "sy": 382,
+      "px": 1040,
+      "py": 382,
+      "time": 1785481728386,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 224,
+      "sy": 541,
+      "px": 224,
+      "py": 541,
+      "time": 1785481728786,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 147,
+      "sy": 159,
+      "px": 147,
+      "py": 159,
+      "time": 1785481729186,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 371,
+      "sy": 674,
+      "px": 371,
+      "py": 674,
+      "time": 1785481729586,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 245,
+      "sy": 499,
+      "px": 245,
+      "py": 499,
+      "time": 1785481729986,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 661,
+      "sy": 554,
+      "px": 661,
+      "py": 554,
+      "time": 1785481730386,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "move-img",
+      "time": 1785481730786,
+      "pt": [
+        [
+          706,
+          920,
+          706,
+          698,
+          0
+        ],
+        [
+          713,
+          920,
+          713,
+          698,
+          57
+        ],
+        [
+          719,
+          920,
+          719,
+          698,
+          103
+        ],
+        [
+          726,
+          920,
+          726,
+          698,
+          178
+        ],
+        [
+          732,
+          920,
+          732,
+          698,
+          223
+        ],
+        [
+          739,
+          920,
+          739,
+          698,
+          309
+        ],
+        [
+          746,
+          920,
+          746,
+          698,
+          394
+        ],
+        [
+          752,
+          920,
+          752,
+          698,
+          430
+        ],
+        [
+          759,
+          920,
+          759,
+          698,
+          499
+        ],
+        [
+          765,
+          920,
+          765,
+          698,
+          595
+        ],
+        [
+          772,
+          920,
+          772,
+          698,
+          633
+        ],
+        [
+          779,
+          920,
+          779,
+          698,
+          725
+        ],
+        [
+          785,
+          920,
+          785,
+          698,
+          814
+        ],
+        [
+          792,
+          920,
+          792,
+          698,
+          858
+        ],
+        [
+          798,
+          920,
+          798,
+          698,
+          911
+        ],
+        [
+          805,
+          920,
+          805,
+          698,
+          994
+        ],
+        [
+          811,
+          920,
+          811,
+          698,
+          1078
+        ],
+        [
+          818,
+          920,
+          818,
+          698,
+          1177
+        ],
+        [
+          825,
+          920,
+          825,
+          698,
+          1266
+        ],
+        [
+          831,
+          920,
+          831,
+          698,
+          1295
+        ],
+        [
+          838,
+          920,
+          838,
+          698,
+          1366
+        ],
+        [
+          844,
+          920,
+          844,
+          698,
+          1401
+        ],
+        [
+          851,
+          920,
+          851,
+          698,
+          1459
+        ]
+      ]
+    }
+  ]
+}
+============================================================
+[8] /check 鎻愪氦鎽樿:
+{
+  "request_fields": {
+    "si": {
+      "len": 91,
+      "prefix": "D6XjhAAB"
+    },
+    "lang": {
+      "len": 1,
+      "prefix": "1"
+    },
+    "tk": {
+      "len": 3186,
+      "prefix": "AwPFCVBh"
+    },
+    "ct": {
+      "len": 1948,
+      "prefix": "AwPFBbBU"
+    },
+    "cs": {
+      "len": 1500,
+      "prefix": "AwPFBGBu"
+    },
+    "version": {
+      "len": 1,
+      "prefix": "3"
+    },
+    "client": {
+      "len": 2,
+      "prefix": "pc"
+    }
+  },
+  "response": {
+    "st": "FWIvvi0aGWGBW1Vd",
+    "code": 16807,
+    "s_code": 16130,
+    "msg": "楠岃瘉澶辫触锛岃閲嶆柊楠岃瘉"
+  }
+}
+[鉁揮 椤靛唴 WASM 宸茬敓鎴?AwPF tk/ct(/cs) 鈥?k鈫抔etTK / x鈫抔etCTData锛堣ˉ鐜娌跨敤 /fp 缁撹锛?[鉁揮 /check 鍝嶅簲 code=16807 tp=undefined msg=楠岃瘉澶辫触锛岃閲嶆柊楠岃瘉
+[!] 缂哄彛/杞ㄨ抗鏈繃椋庢帶锛堝姞瀵嗛摼璺凡閫氾紝鍙皟 offset 鎴栭噸璇曪級
+[鉁揮 缁撴灉宸插啓鍏?F:\AICode\閫嗗悜宸ュ叿\crypto-hunter-lite\cases\jd_giftcard_jcap\repro_check_result.json
+[鉁揮 CDP 杩炴帴宸叉柇寮€锛堝閮ㄦ祻瑙堝櫒淇濈暀锛?
+--- ROUND 4 鎽樿: {"round":4,"bias":6,"bestX":130,"offsetCss":145,"code":16807,"exit":3}
+
+========== ROUND 5/5  GAP_BIAS=-6 ==========
+
+============================================================
+[1] 鍔犺浇 jd_cookies.json ...
+[鉁揮 Cookie 闀垮害: 2310
+[2] 鍚姩 CDP-attach http://127.0.0.1:9222 Blink: http://127.0.0.1:9222
+[鉁揮 CDP attach pages=1 url=https://mygiftcard.jd.com/giftcard/myGiftCardInit.action
+[3] 鎵撳紑绀煎搧鍗￠〉...
+[鉁揮 宸插湪鐩爣椤? https://mygiftcard.jd.com/giftcard/myGiftCardInit.action
+[NET] sgm POST (ignored telemetry)
+[4] 濉崱鍙峰苟鐐瑰嚮绔嬪嵆缁戝畾 鈫?瑙﹀彂 /fp WASM(AwPF)...
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=MadD3AABAAAEbxe4AAUAMFr1a7_--HAhM-620haSJSkWJTp4_5A5BUR1udG0cmjFmTAnutE13yp8Jr61ZsdZrQAAAAA&interfaceId=268435458&fp=bh
+[NET] /check POST fields={"si":{"len":91,"prefix":"MadD3AAB"},"lang":{"len":1,"prefix":"1"},"tk":{"len":2076,"prefix":"AwPFBhBD"},"ct":{"len":1948,"prefix":"AwPFBbBT"},"cs":{"len":1522,"prefix":"AwPFBHDC"},"version":{"len":1,"prefix":"3"},"client":{"len":2,"prefix":"pc"}}
+[鉁揮 /fp ct鍓嶇紑=AwPF code=0 st=zXhgLCJatHEUu2fT
+[5] 绛夊緟 /check tp=30 鎷煎浘鍥惧寘...
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=MadD3AABAAAEbxe4AAUAMFr1a7_--HAhM-620haSJSkWJTp4_5A5BUR1udG0cmjFmTAnutE13yp8Jr61ZsdZrQAAAAA&interfaceId=268435460&fp=bh
+[NET] /check RESP code=0 tp=30 st=Qk7kqOEOnpZj1HVo
+[NET] sgm POST (ignored telemetry)
+[NET] sgm POST (ignored telemetry)
+[5b] captcha layout:
+{
+  "imgs": [
+    {
+      "w": 14,
+      "h": 14,
+      "nw": 96,
+      "nh": 96,
+      "cls": ""
+    },
+    {
+      "w": 14,
+      "h": 14,
+      "nw": 32,
+      "nh": 32,
+      "cls": ""
+    },
+    {
+      "w": 0,
+      "h": 0,
+      "nw": 40,
+      "nh": 40,
+      "cls": "img_tips"
+    },
+    {
+      "w": 271.2708435058594,
+      "h": 167.6875,
+      "nw": 275,
+      "nh": 170,
+      "cls": ""
+    },
+    {
+      "w": 64.11458587646484,
+      "h": 167.6875,
+      "nw": 65,
+      "nh": 170,
+      "cls": ""
+    },
+    {
+      "w": 48,
+      "h": 48,
+      "nw": 96,
+      "nh": 96,
+      "cls": "move-img"
+    },
+    {
+      "w": 0,
+      "h": 0,
+      "nw": 200,
+      "nh": 200,
+      "cls": "feedback_arrow"
+    }
+  ],
+  "imgW": 271.2708435058594,
+  "imgH": 167.6875,
+  "imgNatural": [
+    275,
+    170
+  ],
+  "handle": {
+    "x": 681.6979370117188,
+    "y": 673.6875,
+    "width": 48,
+    "height": 48,
+    "top": 673.6875,
+    "right": 729.6979370117188,
+    "bottom": 721.6875,
+    "left": 681.6979370117188
+  },
+  "trackW": 271.2708435058594
+}
+[6a] gap JS:
+{
+  "ok": true,
+  "bestX": 138,
+  "offsetCss": 7,
+  "scale": 0.05090909090909091,
+  "bg": [
+    275,
+    170
+  ],
+  "piece": [
+    65,
+    170
+  ],
+  "pieceBox": [
+    14,
+    40,
+    51,
+    82
+  ],
+  "score": 10773.724443359375,
+  "source": "check_img_b1_b2"
+}
+[6b] gap OpenCV:
+{
+  "ok": true,
+  "bestX": 150,
+  "bestY": 38,
+  "score": 0.48937126994132996,
+  "votes": [
+    {
+      "method": "TM_CCORR_NORMED_edge",
+      "x": 150,
+      "y": 38,
+      "score": 0.48937126994132996
+    },
+    {
+      "method": "TM_CCOEFF_NORMED_edge",
+      "x": 150,
+      "y": 38,
+      "score": 0.3794633448123932
+    },
+    {
+      "method": "TM_CCORR_NORMED_gray",
+      "x": 150,
+      "y": 0,
+      "score": 0.8769448399543762
+    },
+    {
+      "method": "TM_CCOEFF_NORMED_gray",
+      "x": 150,
+      "y": 0,
+      "score": 0.4269867539405823
+    },
+    {
+      "method": "TM_SQDIFF_NORMED_gray",
+      "x": 150,
+      "y": 0,
+      "score": 0.7528475224971771
+    },
+    {
+      "method": "white_outline",
+      "x": 89,
+      "y": 38,
+      "score": 255
+    }
+  ],
+  "band": [
+    26,
+    97
+  ],
+  "bg": [
+    275,
+    170
+  ],
+  "piece": [
+    65,
+    170
+  ],
+  "pieceBox": [
+    12,
+    38,
+    51,
+    84
+  ],
+  "cropOffsetX": 12,
+  "source": "opencv_multi"
+}
+[6c] 宸蹭繚瀛?b1/b2 鍒?debug/
+[6] 缂哄彛閫夌敤:
+{
+  "source": "opencv_multi",
+  "bestX": 150,
+  "offsetCss": 148,
+  "scale": 0.9864394309303978,
+  "trackW": 271.2708435058594
+}
+[6d] 缂哄彛鏍℃ GAP_BIAS=-6 鈫?offsetCss=142
+[7] 鎷熶汉鎷栧姩 .move-img offsetX=142 (bestX=150, scale=0.9864394309303978, trackW=271.2708435058594) ...
+>>> 璇风湅灞忓箷锛氬嵆灏嗘嫋鍒?offset=142px锛坆estX=150 bias=-6锛夛紝3000ms 鍚庡紑濮嬫嫋
+[6.5] 娉ㄥ叆鍚堟垚 touche_message:
+{
+  "synthLen": 1393,
+  "synthSample": [
+    {
+      "did": "",
+      "cn": "",
+      "sx": 711,
+      "sy": 650,
+      "px": 711,
+      "py": 650,
+      "time": 1785481761744,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 339,
+      "sy": 786,
+      "px": 339,
+      "py": 786,
+      "time": 1785481762144,
+      "type": "click"
+    }
+  ]
+}
+[7a] sample track n=25 totalDt=7803 endX=142
+>>> 鎷栧畬浜嗭紝璇风湅鎷煎浘鍧楁槸鍚﹀鍑嗙己鍙ｏ紙鍋?3000ms 鍐嶈缁撴灉锛?[NET] /check POST fields={"si":{"len":91,"prefix":"MadD3AAB"},"lang":{"len":1,"prefix":"1"},"tk":{"len":3164,"prefix":"AwPFCUAe"},"ct":{"len":1948,"prefix":"AwPFBbAp"},"cs":{"len":1522,"prefix":"AwPFBHDj"},"version":{"len":1,"prefix":"3"},"client":{"len":2,"prefix":"pc"}}
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=MadD3AABAAAEbxe4AAUAMFr1a7_--HAhM-620haSJSkWJTp4_5A5BUR1udG0cmjFmTAnutE13yp8Jr61ZsdZrQAAAAA&interfaceId=268435460&fp=bh
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=MadD3AABAAAEbxe4AAUAMFr1a7_--HAhM-620haSJSkWJTp4_5A5BUR1udG0cmjFmTAnutE13yp8Jr61ZsdZrQAAAAA&interfaceId=268435459&fp=bh
+[NET] /check RESP code=16807 tp=undefined st=M6wKk3tgBeohbbst
+[NET] sgm POST (ignored telemetry)
+[7c] runtime xyList:
+{
+  "n": -1
+}
+[7b] drag done:
+{
+  "mode": "sample",
+  "n": 25,
+  "endX": 142
+}
+[7d] 瀹為檯鎻愪氦 f.touchList:
+{
+  "touchListLen": 10,
+  "touchList": [
+    {
+      "did": "",
+      "cn": "",
+      "sx": 711,
+      "sy": 650,
+      "px": 711,
+      "py": 650,
+      "time": 1785481761744,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 339,
+      "sy": 786,
+      "px": 339,
+      "py": 786,
+      "time": 1785481762144,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 1087,
+      "sy": 489,
+      "px": 1087,
+      "py": 489,
+      "time": 1785481762544,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 1109,
+      "sy": 343,
+      "px": 1109,
+      "py": 343,
+      "time": 1785481762944,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 431,
+      "sy": 240,
+      "px": 431,
+      "py": 240,
+      "time": 1785481763344,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 933,
+      "sy": 433,
+      "px": 933,
+      "py": 433,
+      "time": 1785481763744,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 1268,
+      "sy": 344,
+      "px": 1268,
+      "py": 344,
+      "time": 1785481764144,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 379,
+      "sy": 636,
+      "px": 379,
+      "py": 636,
+      "time": 1785481764544,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 1038,
+      "sy": 214,
+      "px": 1038,
+      "py": 214,
+      "time": 1785481764944,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "move-img",
+      "time": 1785481765344,
+      "pt": [
+        [
+          706,
+          920,
+          706,
+          698,
+          0
+        ],
+        [
+          712,
+          920,
+          712,
+          698,
+          28
+        ],
+        [
+          719,
+          920,
+          719,
+          698,
+          126
+        ],
+        [
+          725,
+          920,
+          725,
+          698,
+          184
+        ],
+        [
+          732,
+          920,
+          732,
+          698,
+          273
+        ],
+        [
+          738,
+          920,
+          738,
+          698,
+          330
+        ],
+        [
+          745,
+          920,
+          745,
+          698,
+          407
+        ],
+        [
+          751,
+          920,
+          751,
+          698,
+          456
+        ],
+        [
+          758,
+          920,
+          758,
+          698,
+          551
+        ],
+        [
+          764,
+          920,
+          764,
+          698,
+          596
+        ],
+        [
+          771,
+          920,
+          771,
+          698,
+          638
+        ],
+        [
+          777,
+          920,
+          777,
+          698,
+          695
+        ],
+        [
+          783,
+          920,
+          783,
+          698,
+          748
+        ],
+        [
+          790,
+          920,
+          790,
+          698,
+          772
+        ],
+        [
+          796,
+          920,
+          796,
+          698,
+          847
+        ],
+        [
+          803,
+          920,
+          803,
+          698,
+          943
+        ],
+        [
+          809,
+          920,
+          809,
+          698,
+          1034
+        ],
+        [
+          816,
+          920,
+          816,
+          698,
+          1104
+        ],
+        [
+          822,
+          920,
+          822,
+          698,
+          1164
+        ],
+        [
+          829,
+          920,
+          829,
+          698,
+          1208
+        ],
+        [
+          835,
+          920,
+          835,
+          698,
+          1280
+        ],
+        [
+          842,
+          920,
+          842,
+          698,
+          1313
+        ],
+        [
+          848,
+          920,
+          848,
+          698,
+          1333
+        ]
+      ]
+    }
+  ]
+}
+============================================================
+[8] /check 鎻愪氦鎽樿:
+{
+  "request_fields": {
+    "si": {
+      "len": 91,
+      "prefix": "MadD3AAB"
+    },
+    "lang": {
+      "len": 1,
+      "prefix": "1"
+    },
+    "tk": {
+      "len": 3164,
+      "prefix": "AwPFCUAe"
+    },
+    "ct": {
+      "len": 1948,
+      "prefix": "AwPFBbAp"
+    },
+    "cs": {
+      "len": 1522,
+      "prefix": "AwPFBHDj"
+    },
+    "version": {
+      "len": 1,
+      "prefix": "3"
+    },
+    "client": {
+      "len": 2,
+      "prefix": "pc"
+    }
+  },
+  "response": {
+    "st": "M6wKk3tgBeohbbst",
+    "code": 16807,
+    "s_code": 16130,
+    "msg": "楠岃瘉澶辫触锛岃閲嶆柊楠岃瘉"
+  }
+}
+[鉁揮 椤靛唴 WASM 宸茬敓鎴?AwPF tk/ct(/cs) 鈥?k鈫抔etTK / x鈫抔etCTData锛堣ˉ鐜娌跨敤 /fp 缁撹锛?[鉁揮 /check 鍝嶅簲 code=16807 tp=undefined msg=楠岃瘉澶辫触锛岃閲嶆柊楠岃瘉
+[!] 缂哄彛/杞ㄨ抗鏈繃椋庢帶锛堝姞瀵嗛摼璺凡閫氾紝鍙皟 offset 鎴栭噸璇曪級
+[鉁揮 缁撴灉宸插啓鍏?F:\AICode\閫嗗悜宸ュ叿\crypto-hunter-lite\cases\jd_giftcard_jcap\repro_check_result.json
+[鉁揮 CDP 杩炴帴宸叉柇寮€锛堝閮ㄦ祻瑙堝櫒淇濈暀锛?
+--- ROUND 5 鎽樿: {"round":5,"bias":-6,"bestX":138,"offsetCss":142,"code":16807,"exit":3}
+
+========== 鍏ㄩ儴杞姹囨€?==========
+[
+  {
+    "round": 1,
+    "bias": 0,
+    "bestX": 161,
+    "offsetCss": null,
+    "code": 16807,
+    "exit": 3
+  },
+  {
+    "round": 2,
+    "bias": 3,
+    "bestX": 151,
+    "offsetCss": 164,
+    "code": 16807,
+    "exit": 3
+  },
+  {
+    "round": 3,
+    "bias": -3,
+    "bestX": 141,
+    "offsetCss": 203,
+    "code": 16807,
+    "exit": 3
+  },
+  {
+    "round": 4,
+    "bias": 6,
+    "bestX": 130,
+    "offsetCss": 145,
+    "code": 16807,
+    "exit": 3
+  },
+  {
+    "round": 5,
+    "bias": -6,
+    "bestX": 138,
+    "offsetCss": 142,
+    "code": 16807,
+    "exit": 3
+  }
+]

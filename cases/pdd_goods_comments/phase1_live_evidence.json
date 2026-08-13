@@ -1,0 +1,87 @@
+{
+  "ts": 1785992524018,
+  "goods_id": "881388350961",
+  "pdduid": "9505538327527",
+  "tab_id": "3AC01DA691EDCC73060A21A21F94ADDD",
+  "phase0": {
+    "stock_aligned": true,
+    "recommended_v1": "chrome_150",
+    "reason": "chrome_150 JA4 exact-match Edge151 (…806a8c22fdea) + 0904/05/06 present + Akamai H2 hash match; Phase0 gate PASSED — no custom ClientHelloSpec for V1",
+    "residual": "JA3 hash still differs (GREASE/extension order). If V1 still 54001, treat residual JA3/④d/④f before spending 1人日 on custom spec.",
+    "branch": "stock_ok -> V1 live (≤2); skip custom spec unless V1 fails",
+    "do_not_live_if": "N/A — Phase0 gate PASSED"
+  },
+  "budget": {
+    "reviews_max": 5,
+    "used": 2
+  },
+  "variants": {
+    "V0": {
+      "variant": "V0_curl_cffi",
+      "page": 41,
+      "steps": {
+        "get_goods": 200,
+        "a3": {
+          "http": 200,
+          "body": "{\"success\":true,\"errorCode\":200,\"errorMsg\":\"SUCCESS\",\"result\":\"7GgtyvtIOCHaMZSZl935PvhkLXyA4pkU\"}"
+        },
+        "ae4": {
+          "http": 200
+        },
+        "a4": {
+          "http": 200,
+          "success": true,
+          "has_a": true
+        },
+        "tgif": {
+          "http": 200
+        }
+      },
+      "dwell": 3.46,
+      "reviews": {
+        "http": 200,
+        "error_code": 54001,
+        "n": 0,
+        "verify": true,
+        "msg": "系统繁忙，请稍后重试",
+        "ok": false
+      },
+      "ac_prefix": "0asWfqnp",
+      "ac_len": 564
+    },
+    "V1": {
+      "variant": "V1_tls_chrome_150",
+      "page": 42,
+      "steps": {
+        "get_goods": 200,
+        "a3": {
+          "http": 200,
+          "body": "{\"success\":true,\"errorCode\":200,\"errorMsg\":\"SUCCESS\",\"result\":\"7GgtyvtIOCHaMZSZl935PvhkLXyA4pkU\"}"
+        },
+        "ae4": {
+          "http": 200
+        },
+        "a4": {
+          "http": 200,
+          "success": true,
+          "has_a": true
+        },
+        "tgif": {
+          "http": 200
+        }
+      },
+      "dwell": 5.12,
+      "reviews": {
+        "http": 200,
+        "error_code": null,
+        "n": 10,
+        "verify": false,
+        "msg": "",
+        "ok": true
+      },
+      "ac_prefix": "0asAfxnp",
+      "ac_len": 562
+    }
+  },
+  "verdict": "PASS_4a: chrome_150 reviews 200 — TLS ClientHello stack is sufficient; pure-local via tls-client成立"
+}

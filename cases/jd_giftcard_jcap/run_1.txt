@@ -1,0 +1,541 @@
+============================================================
+[1] 加载 jd_cookies.json ...
+[✓] Cookie 长度: 2310
+[2] 启动 CDP-attach http://127.0.0.1:9222 Blink: http://127.0.0.1:9222
+[✓] CDP attach pages=2 url=https://mygiftcard.jd.com/giftcard/myGiftCardInit.action
+[3] 打开礼品卡页...
+[✓] 已在目标页: https://mygiftcard.jd.com/giftcard/myGiftCardInit.action
+[4] 填卡号并点击立即绑定 → 触发 /fp WASM(AwPF)...
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=NXkGjwABAAADQDvqDMkAMAzvJQaus0Uu3K3RtQmcppnsvPwpDEW0hjdOUnRqjxYMEMRsILAJz8oWIrHBSuWgPAAAAAA&interfaceId=268435458&fp=bh
+[NET] /check POST fields={"si":{"len":91,"prefix":"NXkGjwAB"},"lang":{"len":1,"prefix":"1"},"tk":{"len":2076,"prefix":"AwPFBhDF"},"ct":{"len":1948,"prefix":"AwPFBbBf"},"cs":{"len":1543,"prefix":"AwPFBICH"},"version":{"len":1,"prefix":"3"},"client":{"len":2,"prefix":"pc"}}
+[NET] /check RESP code=0 tp=30 st=ZzteKkSS53uchWNv
+[✓] /fp ct前缀=AwPF code=0 st=cT4xl8bSBVUmC8RO
+[5] 等待 /check tp=30 拼图图包...
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=NXkGjwABAAADQDvqDMkAMAzvJQaus0Uu3K3RtQmcppnsvPwpDEW0hjdOUnRqjxYMEMRsILAJz8oWIrHBSuWgPAAAAAA&interfaceId=268435460&fp=bh
+[NET] sgm POST (ignored telemetry)
+[5b] captcha layout:
+{
+  "imgs": [
+    {
+      "w": 14,
+      "h": 14,
+      "nw": 96,
+      "nh": 96,
+      "cls": ""
+    },
+    {
+      "w": 14,
+      "h": 14,
+      "nw": 32,
+      "nh": 32,
+      "cls": ""
+    },
+    {
+      "w": 0,
+      "h": 0,
+      "nw": 40,
+      "nh": 40,
+      "cls": "img_tips"
+    },
+    {
+      "w": 271.2708435058594,
+      "h": 167.6875,
+      "nw": 275,
+      "nh": 170,
+      "cls": ""
+    },
+    {
+      "w": 64.11458587646484,
+      "h": 167.6875,
+      "nw": 65,
+      "nh": 170,
+      "cls": ""
+    },
+    {
+      "w": 48,
+      "h": 48,
+      "nw": 96,
+      "nh": 96,
+      "cls": "move-img"
+    },
+    {
+      "w": 0,
+      "h": 0,
+      "nw": 200,
+      "nh": 200,
+      "cls": "feedback_arrow"
+    }
+  ],
+  "imgW": 271.2708435058594,
+  "imgH": 167.6875,
+  "imgNatural": [
+    275,
+    170
+  ],
+  "handle": {
+    "x": 681.6979370117188,
+    "y": 673.6875,
+    "width": 48,
+    "height": 48,
+    "top": 673.6875,
+    "right": 729.6979370117188,
+    "bottom": 721.6875,
+    "left": 681.6979370117188
+  },
+  "trackW": 271.2708435058594
+}
+[6a] gap JS:
+{
+  "ok": true,
+  "bestX": 139,
+  "offsetCss": 7,
+  "scale": 0.05090909090909091,
+  "bg": [
+    275,
+    170
+  ],
+  "piece": [
+    65,
+    170
+  ],
+  "pieceBox": [
+    14,
+    28,
+    51,
+    70
+  ],
+  "score": 11147.672512207031,
+  "source": "check_img_b1_b2"
+}
+[6b] gap OpenCV:
+{
+  "ok": true,
+  "bestX": 151,
+  "bestY": 26,
+  "score": 0.6160653829574585,
+  "votes": [
+    {
+      "method": "TM_CCORR_NORMED_edge",
+      "x": 151,
+      "y": 26,
+      "score": 0.6160653829574585
+    },
+    {
+      "method": "TM_CCOEFF_NORMED_edge",
+      "x": 151,
+      "y": 26,
+      "score": 0.46724897623062134
+    },
+    {
+      "method": "TM_SQDIFF_NORMED_edge",
+      "x": 151,
+      "y": 26,
+      "score": 0.22470569610595703
+    },
+    {
+      "method": "TM_CCORR_NORMED_gray",
+      "x": 151,
+      "y": 26,
+      "score": 0.863264799118042
+    },
+    {
+      "method": "TM_CCOEFF_NORMED_gray",
+      "x": 151,
+      "y": 26,
+      "score": 0.5557315945625305
+    },
+    {
+      "method": "TM_SQDIFF_NORMED_gray",
+      "x": 80,
+      "y": 8,
+      "score": 0.6640073359012604
+    },
+    {
+      "method": "white_outline",
+      "x": 232,
+      "y": 26,
+      "score": 113.93617021276596
+    }
+  ],
+  "band": [
+    14,
+    85
+  ],
+  "bg": [
+    275,
+    170
+  ],
+  "piece": [
+    65,
+    170
+  ],
+  "pieceBox": [
+    12,
+    26,
+    51,
+    72
+  ],
+  "cropOffsetX": 12,
+  "source": "opencv_multi"
+}
+[6c] 已保存 b1/b2 到 debug/
+[6] 缺口选用:
+{
+  "source": "opencv_multi",
+  "bestX": 151,
+  "offsetCss": 149,
+  "scale": 0.9864394309303978,
+  "trackW": 271.2708435058594
+}
+[7] 拟人拖动 .move-img offsetX=149 (bestX=151, scale=0.9864394309303978, trackW=271.2708435058594) ...
+[6.5] 注入合成 touche_message:
+{
+  "synthLen": 1387,
+  "synthSample": [
+    {
+      "did": "",
+      "cn": "",
+      "sx": 343,
+      "sy": 543,
+      "px": 343,
+      "py": 543,
+      "time": 1785471444717,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 950,
+      "sy": 214,
+      "px": 950,
+      "py": 214,
+      "time": 1785471445117,
+      "type": "click"
+    }
+  ]
+}
+[7a] sample track n=25 totalDt=7803 endX=149
+[NET] /check POST fields={"si":{"len":91,"prefix":"NXkGjwAB"},"lang":{"len":1,"prefix":"1"},"tk":{"len":3207,"prefix":"AwPFCWCi"},"ct":{"len":1927,"prefix":"AwPFBaBj"},"cs":{"len":1522,"prefix":"AwPFBHDw"},"version":{"len":1,"prefix":"3"},"client":{"len":2,"prefix":"pc"}}
+[7c] runtime xyList:
+{
+  "n": -1
+}
+[7b] drag done:
+{
+  "mode": "sample",
+  "n": 25,
+  "endX": 149
+}
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=NXkGjwABAAADQDvqDMkAMAzvJQaus0Uu3K3RtQmcppnsvPwpDEW0hjdOUnRqjxYMEMRsILAJz8oWIrHBSuWgPAAAAAA&interfaceId=268435460&fp=bh
+[NET] report GET https://jcapmonitor.m.jd.com/web_jcap_report?appID=&uid=&sid=NXkGjwABAAADQDvqDMkAMAzvJQaus0Uu3K3RtQmcppnsvPwpDEW0hjdOUnRqjxYMEMRsILAJz8oWIrHBSuWgPAAAAAA&interfaceId=268435459&fp=bh
+[NET] sgm POST (ignored telemetry)
+[NET] /check RESP code=16807 tp=undefined st=0v1aHESPEdQjnZTI
+[7d] 实际提交 f.touchList:
+{
+  "touchListLen": 10,
+  "touchList": [
+    {
+      "did": "",
+      "cn": "",
+      "sx": 343,
+      "sy": 543,
+      "px": 343,
+      "py": 543,
+      "time": 1785471444717,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 950,
+      "sy": 214,
+      "px": 950,
+      "py": 214,
+      "time": 1785471445117,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 1031,
+      "sy": 670,
+      "px": 1031,
+      "py": 670,
+      "time": 1785471445517,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 201,
+      "sy": 298,
+      "px": 201,
+      "py": 298,
+      "time": 1785471445917,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 454,
+      "sy": 85,
+      "px": 454,
+      "py": 85,
+      "time": 1785471446317,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 1148,
+      "sy": 419,
+      "px": 1148,
+      "py": 419,
+      "time": 1785471446717,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 357,
+      "sy": 169,
+      "px": 357,
+      "py": 169,
+      "time": 1785471447117,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 843,
+      "sy": 104,
+      "px": 843,
+      "py": 104,
+      "time": 1785471447517,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "",
+      "sx": 120,
+      "sy": 477,
+      "px": 120,
+      "py": 477,
+      "time": 1785471447917,
+      "type": "click"
+    },
+    {
+      "did": "",
+      "cn": "move-img",
+      "time": 1785471448317,
+      "pt": [
+        [
+          706,
+          894,
+          706,
+          698,
+          0
+        ],
+        [
+          713,
+          894,
+          713,
+          698,
+          72
+        ],
+        [
+          720,
+          894,
+          720,
+          698,
+          158
+        ],
+        [
+          726,
+          894,
+          726,
+          698,
+          231
+        ],
+        [
+          733,
+          894,
+          733,
+          698,
+          308
+        ],
+        [
+          740,
+          894,
+          740,
+          698,
+          335
+        ],
+        [
+          747,
+          894,
+          747,
+          698,
+          408
+        ],
+        [
+          753,
+          894,
+          753,
+          698,
+          446
+        ],
+        [
+          760,
+          894,
+          760,
+          698,
+          528
+        ],
+        [
+          767,
+          894,
+          767,
+          698,
+          554
+        ],
+        [
+          774,
+          894,
+          774,
+          698,
+          611
+        ],
+        [
+          781,
+          894,
+          781,
+          698,
+          704
+        ],
+        [
+          787,
+          894,
+          787,
+          698,
+          801
+        ],
+        [
+          794,
+          894,
+          794,
+          698,
+          877
+        ],
+        [
+          801,
+          894,
+          801,
+          698,
+          958
+        ],
+        [
+          808,
+          894,
+          808,
+          698,
+          985
+        ],
+        [
+          814,
+          894,
+          814,
+          698,
+          1022
+        ],
+        [
+          821,
+          894,
+          821,
+          698,
+          1065
+        ],
+        [
+          828,
+          894,
+          828,
+          698,
+          1093
+        ],
+        [
+          835,
+          894,
+          835,
+          698,
+          1113
+        ],
+        [
+          841,
+          894,
+          841,
+          698,
+          1205
+        ],
+        [
+          848,
+          894,
+          848,
+          698,
+          1300
+        ],
+        [
+          855,
+          894,
+          855,
+          698,
+          1328
+        ]
+      ]
+    }
+  ]
+}
+============================================================
+[8] /check 提交摘要:
+{
+  "request_fields": {
+    "si": {
+      "len": 91,
+      "prefix": "NXkGjwAB"
+    },
+    "lang": {
+      "len": 1,
+      "prefix": "1"
+    },
+    "tk": {
+      "len": 3207,
+      "prefix": "AwPFCWCi"
+    },
+    "ct": {
+      "len": 1927,
+      "prefix": "AwPFBaBj"
+    },
+    "cs": {
+      "len": 1522,
+      "prefix": "AwPFBHDw"
+    },
+    "version": {
+      "len": 1,
+      "prefix": "3"
+    },
+    "client": {
+      "len": 2,
+      "prefix": "pc"
+    }
+  },
+  "response": {
+    "st": "0v1aHESPEdQjnZTI",
+    "code": 16807,
+    "s_code": 16130,
+    "msg": "验证失败，请重新验证"
+  }
+}
+[✓] 页内 WASM 已生成 AwPF tk/ct(/cs) — k→getTK / x→getCTData（补环境沿用 /fp 结论）
+[✓] /check 响应 code=16807 tp=undefined msg=验证失败，请重新验证
+[!] 缺口/轨迹未过风控（加密链路已通，可调 offset 或重试）
+[✓] 结果已写入 F:\AICode\逆向工具\crypto-hunter-lite\cases\jd_giftcard_jcap\repro_check_result.json
+[✓] CDP 连接已断开（外部浏览器保留）

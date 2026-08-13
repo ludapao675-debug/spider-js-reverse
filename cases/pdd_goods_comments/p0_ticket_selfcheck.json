@@ -1,0 +1,33 @@
+{
+  "ts": "2026-08-06T12:10+08:00",
+  "scope": "P0 ticket self-check (zero reviews budget)",
+  "sources": {
+    "a4_registration_payload": "a4_decoded_payload.json (CDP Edge session capture)",
+    "reviews_anti_content_0as": "historical C2 in local_repro_experiment (sdenv token x browser fetch = 200)"
+  },
+  "a4_registration_fields": {
+    "botD": {"bot": true, "botKind": "headless_chrome"},
+    "botKinds": "headless_chrome,unknown",
+    "botSignals": {"detectPluginsArray": "headless_chrome", "detectWebDriverDescriptor": "unknown"},
+    "cdpProxy": "true",
+    "hookFuncs": [
+      "CSSStyleDeclaration.setProperty",
+      "Element.attachShadow",
+      "Navigator.connection",
+      "Navigator.mimeTypes",
+      "Navigator.plugins",
+      "XMLHttpRequest.open",
+      "XMLHttpRequest.send",
+      "Window.fetch"
+    ],
+    "webdriver_in_rawData": "not available",
+    "hasCdc": "false",
+    "headlessByProperties": "false",
+    "timing_plausible_note": "moveData has 1 point; click/input/key empty; reportType=init — thin but non-empty interaction"
+  },
+  "verdict_split": {
+    "a4_ticket_from_cdp_session": "DIRTY — self-reports bot/cdp/hooks; explains account B-class risk (verify upgrade). Cleaned forge still got a4 success:true then reviews 54001 on curl_cffi → acceptance != clean marking; channel still binds.",
+    "reviews_0as_from_sdenv": "CLEAN ENOUGH for reviews — C2: same sdenv 0as accepted by browser native fetch (200+10). Missing 2x2 cell already filled: ticket not the blocker for channel split."
+  },
+  "implication": "P1 missing cell = TICKET_CLEAN_CHANNEL_GAP (do not re-burn). Budget to ④a (JA3/JA4 ClientHello) / optional utls; not to 'fix sdenv 0as math' first. Parallel: extensionize RPC to stop feeding dirty a4 from CDP hooks."
+}

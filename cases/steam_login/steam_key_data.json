@@ -1,0 +1,19 @@
+{
+  "_note": "真实公钥 + 活体加密结果, 2026-07-16 通过 MCP 工具在 store.steampowered.com 登录页内获取与验证",
+  "endpoint": "https://api.steampowered.com/IAuthenticationService/GetPasswordRSAPublicKey/v1/?account_name=<acct>",
+  "account": "probe_testacct_2026",
+  "modulus_hex": "d326143371bb901a3e2dc93a7dc1909522d795c9923d98718fa442b4409031f469f88bf38c3d637b3e72e9d3439a6508c7999866ff0d60c70212ebaeb452fa657dd3acd5c93c5778cb1006a8deed142df039070db137d74072ea10f9ea68eb86d4d34c089d41fe2f0b81a33648b607f84386342753ab81a17206025b756626be626327ce9aaf90c5102d7e2a14f62355f2e748849eec01d08c8565c1268f62171e8e171d76fed755808b7f550bb50692ed83c7903172bdb14b516c23428181f5efb597dd2d29f5f462f8e5b1d469174ca33d87c164edd9a97cc148a1c8dcdc3a0a1d51e7968df9f90ee223c485d252dc9d2f621804c3b7f14caa2eb04f17b901",
+  "exponent_hex": "010001",
+  "timestamp": "101306500000",
+  "key_bits": 2048,
+  "algorithm": "RSA-2048 / PKCS#1 v1.5",
+  "key_rotation": "publickey_mod 与 timestamp 每次会话/每次请求都会变化, 本值仅用于当次复现验证",
+  "live_encrypted_password": "uinbFP429DtQoG4Rop62Cfz+WLCzIbm9Qq5YDfR0RVV6rS//wkeZqHfCvWa/b751g1wQRNGhZ+/+T8firqLZJOjQd1AO3YRxFFiqdc5EaFPosJUCMmZfB1WtCBQb2bXk72noJnVDKD2oE7UF4K75MBFQZwOdnGNxTWTkoLS50Bj3uqS5FMh1n5fMk+7fu2VJdmX2eEbn3/H5jtZ54f2fzJo6Psru7SfqT6vKHZKRJyIFg7U1nST7K15W2a9YBSHLazp+5ghykw5rYnTAnWTPGqfY2ADgPH3sUffoJb9rgqYTRRUJ0C/0Dz9/XT1E95Jw1kHIJ6l49tT4MygwENO+3Q==",
+  "live_encrypted_for_password": "MyTestPass!2026",
+  "live_encrypted_via": "页面内 RSA.getPublicKey(real_mod, real_exp) + RSA.encrypt(pw, pub), 经 MCP ch_page_run_js 调用, 由 Steam 自己的 rsa.js 计算",
+  "live_encrypted_ct_len": 344,
+  "verification": {
+    "page_encrypt_decrypt_loop": "RSA-1024 自生成密钥对: 页面 RSA.encrypt 加密 -> 标准 PKCS#1 v1.5 私钥解密 -> match=true (decryptedPlain==plaintext)",
+    "conclusion": "Steam 页面 RSA.encrypt == 标准 RSA PKCS#1 v1.5 == 本地复现脚本(steam_login_repro.py / steam_login.py); 代入真实公钥即得 Steam 服务端可解密的 encrypted_password"
+  }
+}

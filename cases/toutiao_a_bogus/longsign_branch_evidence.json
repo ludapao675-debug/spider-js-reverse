@@ -1,0 +1,49 @@
+{
+  "ts": "2026-07-21T06:52:00Z",
+  "goal": "deep reverse long-sign branch (168/124 Node vs 180/134 live)",
+  "verdicts": [
+    {
+      "claim": "me[23] controls long vs short sign",
+      "result": "FALSE",
+      "evidence": [
+        "Node: force me23 true/false/patch snapshot → always len=168 raw=124",
+        "Live: ab_len=180 with me23=false; later ab_len=180 with me23=true"
+      ]
+    },
+    {
+      "claim": "missing plugins causes short sign",
+      "result": "FALSE",
+      "evidence": [
+        "Node already plugins.length=3; enriching live plugin table still 168/124"
+      ]
+    },
+    {
+      "claim": "harden canvas/webgl wait alone yields 176/180",
+      "result": "FALSE_SO_FAR",
+      "evidence": [
+        "create_canvas=1 webgl=1 but toDataURL=0 2d=0 offlineAudio=0 during Node sign",
+        "wait 0/4/8/10s all still 168"
+      ]
+    }
+  ],
+  "structure": {
+    "live_b64_len": 180,
+    "live_raw_len": 134,
+    "node_b64_len": 168,
+    "node_raw_len": 124,
+    "delta_raw_bytes": 10,
+    "shared_mid_block": "jy4hbO3OZrQCnMZwf7Wko/2AhQfS",
+    "note": "delta sits in variable fingerprint tail after shared mid block; not a single boolean gate in me[]"
+  },
+  "live_sample_2026_07_21": {
+    "ab_len": 180,
+    "ab": "QJWM/VhfDE2sgD635fALfY3qV1r3Y8gU0t9bsEhqkxfiKg39HMYn9exohpXvWBmjEG/MIeRjy4hbO3OZrQCnMZwf7Wko/2AhQfSWtF325o0jUZUJeyWmE0DF-hsUtFNQsv14EOfkqXQtFuRDlIKrmhxXTfVja3GMyEkrPVnbZVyziKEMD-E=",
+    "webgl_renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "plugins_n": 3
+  },
+  "next_jsvmp_steps": [
+    "early-inject Function.prototype.call hook before bdms load; capture arg arrays len 124..140 and ret strings len 168..188 + pc",
+    "diff which env collectors append the extra ~10 raw bytes (likely audio/font/webgl readPixels path not triggered in Node)",
+    "optional: dump live fingerprint blob from VM locals at encode site and inject into Node before encode"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "ts": 1785988217533,
+  "goods_id": "881388350961",
+  "page": 3,
+  "ip_local": "64.64.234.18",
+  "ip_browser": "64.64.234.18",
+  "ip_same": true,
+  "ac_prefix": "0asAfqnp",
+  "ac_len": 547,
+  "cookie_names": [
+    "pdd_user_id",
+    "jrpl",
+    "_nano_fp",
+    "api_uid",
+    "webp",
+    "dilx",
+    "njrpl",
+    "PDDAccessToken",
+    "pdd_user_uin",
+    "pdd_vds"
+  ],
+  "browser_ctrl": {
+    "elapsed": 0.364,
+    "status": 200,
+    "n": 10,
+    "error_code": null,
+    "verify": false
+  },
+  "local_probe": {
+    "elapsed": 0.177,
+    "impersonate": "chrome",
+    "http_status": 200,
+    "error_code": 54001,
+    "verify": true,
+    "n": 0,
+    "head": "{'success': False, 'error_code': 54001, 'error_msg': '系统繁忙，请稍后重试', 'verify_auth_token': 'NOLdaERaDvC0nUu61CHXegdbd7964c588493d34'}"
+  },
+  "verdict": "IP_EXCLUDED_CHANNEL_BINDING: same public IP + same browser token; browser stack OK, curl_cffi stack 54001 => TLS/HTTP2 connection fingerprint (or non-IP channel signal), not anti_content algorithm / not IP reputation"
+}

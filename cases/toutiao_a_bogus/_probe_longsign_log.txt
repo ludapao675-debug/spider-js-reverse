@@ -1,0 +1,48 @@
+[case] xmst_only_wait4s
+  -> len=168 raw=124 me23=false canvas={"create_canvas":1,"toDataURL":0,"getContext_2d":0,"getContext_webgl":1,"offlineAudio":0}
+[case] xmst_force_me23_true
+  -> len=168 raw=124 me23=true canvas={"create_canvas":1,"toDataURL":0,"getContext_2d":0,"getContext_webgl":1,"offlineAudio":0}
+[case] xmst_force_me23_false
+  -> len=168 raw=124 me23=false canvas={"create_canvas":1,"toDataURL":0,"getContext_2d":0,"getContext_webgl":1,"offlineAudio":0}
+[case] patch_full_snapshot
+  -> len=168 raw=124 me23=true canvas={"create_canvas":1,"toDataURL":0,"getContext_2d":0,"getContext_webgl":1,"offlineAudio":0}
+[case] patch_full_wait10s
+  -> len=168 raw=124 me23=true canvas={"create_canvas":1,"toDataURL":0,"getContext_2d":0,"getContext_webgl":1,"offlineAudio":0}
+[case] no_wait
+  -> len=168 raw=124 me23=true canvas={"create_canvas":0,"toDataURL":0,"getContext_2d":0,"getContext_webgl":0,"offlineAudio":0}
+{
+  "ok": true,
+  "out": "F:\\AICode\\閫嗗悜宸ュ叿\\crypto-hunter-lite\\cases\\toutiao_a_bogus\\probe_longsign_branch_out.json",
+  "lens": [
+    [
+      "xmst_only_wait4s",
+      168,
+      false
+    ],
+    [
+      "xmst_force_me23_true",
+      168,
+      true
+    ],
+    [
+      "xmst_force_me23_false",
+      168,
+      false
+    ],
+    [
+      "patch_full_snapshot",
+      168,
+      true
+    ],
+    [
+      "patch_full_wait10s",
+      168,
+      true
+    ],
+    [
+      "no_wait",
+      168,
+      true
+    ]
+  ]
+}

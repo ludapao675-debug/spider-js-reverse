@@ -1,0 +1,90 @@
+{
+  "chrome": {
+    "https://tls.peet.ws/api/all": {
+      "status": 200,
+      "data": {
+        "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+        "http_version": "h2"
+      }
+    },
+    "https://tls.browserleaks.com/json": {
+      "status": 200,
+      "data": {
+        "ja3_hash": "6539fe530661c68fa31907d874125098",
+        "ja3_text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,18-65281-16-13-5-10-17613-45-43-23-65037-35-11-51-0-27,4588-29-23-24,0",
+        "ja4": "t13d1516h2_8daaf6152771_d8a2da3f94cd",
+        "ja4_r": "t13d1516h2_002f,0035,009c,009d,1301,1302,1303,c013,c014,c02b,c02c,c02f,c030,cca8,cca9_0005,000a,000b,000d,0012,0017,001b,0023,002b,002d,0033,44cd,fe0d,ff01_0403,0804,0401,0503,0805,0501,0806,0601",
+        "ja4_o": "t13d1516h2_acb858a92679_3b50eaa59821",
+        "akamai_hash": "52d84b11737d980aef856699f885ca86",
+        "akamai_text": "1:65536;2:0;4:6291456;6:262144|15663105|0|m,a,s,p",
+        "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+      }
+    }
+  },
+  "chrome131": {
+    "https://tls.peet.ws/api/all": {
+      "status": 200,
+      "data": {
+        "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+        "http_version": "h2"
+      }
+    },
+    "https://tls.browserleaks.com/json": {
+      "status": 200,
+      "data": {
+        "ja3_hash": "459f65ec121bae193a7295b610441830",
+        "ja3_text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,11-16-65037-0-45-51-23-17513-65281-27-35-10-13-18-43-5,4588-29-23-24,0",
+        "ja4": "t13d1516h2_8daaf6152771_02713d6af862",
+        "ja4_r": "t13d1516h2_002f,0035,009c,009d,1301,1302,1303,c013,c014,c02b,c02c,c02f,c030,cca8,cca9_0005,000a,000b,000d,0012,0017,001b,0023,002b,002d,0033,4469,fe0d,ff01_0403,0804,0401,0503,0805,0501,0806,0601",
+        "ja4_o": "t13d1516h2_acb858a92679_6fcbe1307832",
+        "akamai_hash": "52d84b11737d980aef856699f885ca86",
+        "akamai_text": "1:65536;2:0;4:6291456;6:262144|15663105|0|m,a,s,p",
+        "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+      }
+    }
+  },
+  "edge99": {
+    "https://tls.peet.ws/api/all": {
+      "status": 200,
+      "data": {
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36 Edg/99.0.1150.30",
+        "http_version": "h2"
+      }
+    },
+    "https://tls.browserleaks.com/json": {
+      "status": 200,
+      "data": {
+        "ja3_hash": "cd08e31494f9531f560d64c695473da9",
+        "ja3_text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-13-18-51-45-43-27-17513-21,29-23-24,0",
+        "ja4": "t13d1516h2_8daaf6152771_e5627efa2ab1",
+        "ja4_r": "t13d1516h2_002f,0035,009c,009d,1301,1302,1303,c013,c014,c02b,c02c,c02f,c030,cca8,cca9_0005,000a,000b,000d,0012,0015,0017,001b,0023,002b,002d,0033,4469,ff01_0403,0804,0401,0503,0805,0501,0806,0601",
+        "ja4_o": "t13d1516h2_acb858a92679_2d79a7d73c2f",
+        "akamai_hash": "4f04edce68a7ecbe689edce7bf5f23f3",
+        "akamai_text": "1:65536;3:1000;4:6291456;6:262144|15663105|0|m,a,s,p",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36 Edg/99.0.1150.30"
+      }
+    }
+  },
+  "edge101": {
+    "https://tls.peet.ws/api/all": {
+      "status": 200,
+      "data": {
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.47",
+        "http_version": "h2"
+      }
+    },
+    "https://tls.browserleaks.com/json": {
+      "status": 200,
+      "data": {
+        "ja3_hash": "cd08e31494f9531f560d64c695473da9",
+        "ja3_text": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-13-18-51-45-43-27-17513-21,29-23-24,0",
+        "ja4": "t13d1516h2_8daaf6152771_e5627efa2ab1",
+        "ja4_r": "t13d1516h2_002f,0035,009c,009d,1301,1302,1303,c013,c014,c02b,c02c,c02f,c030,cca8,cca9_0005,000a,000b,000d,0012,0015,0017,001b,0023,002b,002d,0033,4469,ff01_0403,0804,0401,0503,0805,0501,0806,0601",
+        "ja4_o": "t13d1516h2_acb858a92679_2d79a7d73c2f",
+        "akamai_hash": "4f04edce68a7ecbe689edce7bf5f23f3",
+        "akamai_text": "1:65536;3:1000;4:6291456;6:262144|15663105|0|m,a,s,p",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.47"
+      }
+    }
+  }
+}
