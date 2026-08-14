@@ -76,5 +76,5 @@ cases/fanqie_novel_font/
 在项目根目录下，直接执行以下 Python 命令即可完成自动化无损解密复现测试：
 
 ```bash
-d:\python_work\venv\Scripts\python.exe cases/fanqie_novel_font/repro.py
+python cases/fanqie_novel_font/repro.py
 ```

@@ -4,3 +4,9 @@ __pycache__/
 *.pyc
 .DS_Store
 *.log
+
+# 凭据与运行产物（不提交真实 Cookie/Token）
+**/cookies*.json
+**/*cookies*.json
+**/_tok*.txt
+cases/ths_q_hexin_v/v_sandbox.txt

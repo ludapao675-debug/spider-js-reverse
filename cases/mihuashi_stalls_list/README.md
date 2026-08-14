@@ -58,7 +58,7 @@
 
 ```powershell
 cd cases\mihuashi_stalls_list
-D:\python_work\venv\Scripts\python.exe repro.py --page 2
+python repro.py --page 2
 # 可选参数：--page --per --category --order --state --only-fast
 ```
 
