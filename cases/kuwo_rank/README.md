@@ -20,3 +20,21 @@ Webpack 中定位到 `headers["Secret"] = f(o, v)`：`o` 为该 Cookie 值，`v`
 
 ## 4. 验证样本
 验证代码及样板可见同目录下的 `repro.js`。
+
+## 5. 闭环验证（需运行时自动获取抓包样本）
+仓库不携带真实 Cookie/Secret（敏感数据）。运行方式：
+
+```bash
+# 无参数：演示加密算法输出
+node repro.js
+
+# 闭环验证：传入真实抓包样本（Cookie 与 Secret 必须来自同一次请求）
+node repro.js <真实Cookie> <真实Secret>
+```
+
+**自动获取步骤**：
+1. 浏览器打开酷我音乐排行榜页（https://www.kuwo.cn/rankList）
+2. DevTools → Network 过滤 `musicList` 请求，点击查看 Headers
+3. 复制请求头 `Cookie` 中的 `Hm_Iuvt_cdb524f42f23cer9b268564v7y735ewrq2324` 值 → 作为第 1 个参数
+4. 复制请求头 `Secret` 值 → 作为第 2 个参数
+5. 运行 `node repro.js <Cookie> <Secret>`，输出 ✅ 即闭环验证通过

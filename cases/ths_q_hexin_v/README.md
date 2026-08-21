@@ -98,6 +98,24 @@
 - 规则 3：`ch_fetch_url`/`requests` 服务端直连是判定"有无加密参数"的最快对照实验（有 Cookie vs 无 Cookie、有 UA vs 无 UA 矩阵）
 - 规则 4：高频 cache-bust 探测会触发 IP 级软挑战（200 + upass 重定向），控制频率或换 IP
 
+## 解码工具用法（真实 hexin-v 运行时自动获取）
+
+`decode_v.js` 仓库中不携带真实 Cookie，需传入浏览器中实际生成的 hexin-v 值：
+
+```bash
+# 无参数：输出使用说明
+node decode_v.js
+
+# 传参解码：输出 payload 布局字段与校验和验证
+node decode_v.js <hexin-v Cookie 值>
+```
+
+**自动获取步骤**：
+1. 浏览器打开同花顺行情页（https://q.10jqka.com.cn），触发一次列表请求（401 挑战通过后）
+2. DevTools → Application → Cookies → `q.10jqka.com.cn`
+3. 复制名为 `hexin-v`（或 `v`）的 Cookie 值，作为命令行参数传入
+4. 输出 `重算校验和: N ✔ 匹配` 且 payload 长度符合预期即解码成功
+
 ## 回归说明
 
 - 哪些点容易变：chameleon 版本号（挑战页引用的 `chameleon.1.7.min.<时间戳>.js` 会滚动更新）、buffer 宽度布局、XOR 乘数（当前 0x83）、base64 字母表
