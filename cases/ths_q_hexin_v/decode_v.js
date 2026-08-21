@@ -1,6 +1,19 @@
 // 解码真实 hexin-v Cookie，交叉验证 buffer 布局
 // Qn 编码链：[c=3, checksum] + XOR流加密 + 自定义base64(A-Za-z0-9-_)
-const REAL_V = process.argv[2] || '<已脱敏: hexin-v Cookie 请运行时从浏览器获取>';
+//
+// 用法：传入真实 hexin-v Cookie 值（运行时自动获取，仓库不携带真实 Cookie）
+//   node decode_v.js <hexin-v Cookie 值>
+// 自动获取方式：打开同花顺行情页（https://q.10jqka.com.cn），DevTools → Application →
+// Cookies → q.10jqka.com.cn → 复制名为 hexin-v 的 Cookie 值作为命令行参数传入。
+const REAL_V = process.argv[2] || null;
+if (!REAL_V) {
+  console.error(
+    '[ERROR] 缺少 hexin-v Cookie 参数。\n' +
+    '用法: node decode_v.js <hexin-v Cookie 值>\n' +
+    '自动获取: 浏览器打开同花顺页面 → DevTools → Application → Cookies → 复制 hexin-v 值。'
+  );
+  process.exit(1);
+}
 
 const ALPHA = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
 const idx = {};
@@ -27,10 +40,11 @@ function xorDecrypt(bytes, startKey) {
   return out;
 }
 
-// 3) strhash：a=(a<<5)-a+charCode，32 位回绕
+// 3) strhash：a=(a<<5)-a+charCode，32 位回绕（兼容字符串与字节数组入参）
 function strhash(s) {
+  const chars = typeof s === "string" ? s : Array.from(s, (b) => String.fromCharCode(b)).join("");
   let a = 0;
-  for (let i = 0; i < s.length; i++) a = (((a << 5) - a + s.charCodeAt(i)) >>> 0);
+  for (let i = 0; i < chars.length; i++) a = (((a << 5) - a + chars.charCodeAt(i)) >>> 0);
   return a;
 }
 

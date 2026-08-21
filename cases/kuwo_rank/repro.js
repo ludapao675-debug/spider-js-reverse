@@ -54,10 +54,26 @@ function generateSecret(cookieVal, fixed_d = null) {
 }
 
 // ----------------------------------------------------
-// 【真实网络抓包数据闭环验证】
+// 【抓包数据闭环验证】
 // ----------------------------------------------------
-const REAL_COOKIE = "<已脱敏: 真实 Cookie 请运行时抓包获取>";
-const REAL_SECRET = "<已脱敏: 真实 Secret 请运行时抓包获取>";
+// 仓库不携带真实抓包样本（Cookie/Secret 属敏感数据，请运行时自动获取）：
+//   1. 浏览器打开酷我音乐排行榜页（https://www.kuwo.cn/rankList），
+//      DevTools → Network 抓取任意含 Secret 参数的请求；
+//   2. 复制该请求的 Cookie 与 Secret 值作为命令行参数传入：
+//        node repro.js <真实Cookie> <真实Secret>
+//   3. 脚本验证本地算法生成的 Secret 是否与抓包 Secret 一致（闭环）。
+const REAL_COOKIE = process.argv[2] || null;
+const REAL_SECRET = process.argv[3] || null;
+
+if (!REAL_COOKIE || !REAL_SECRET) {
+  console.log("== 酷我音乐 Secret 加密演示（未传入抓包样本） ==");
+  const demo = generateSecret("demo_cookie_value");
+  console.log("输入 Cookie : demo_cookie_value");
+  console.log("生成的 Secret:", demo);
+  console.log("\n闭环验证模式（需真实抓包数据）:");
+  console.log("  node repro.js <真实Cookie> <真实Secret>");
+  process.exit(0);
+}
 
 // 从真实的 Secret 尾部提取最后 8 个字符作为反推的 d
 const extracted_d_hex = REAL_SECRET.slice(-8);
@@ -77,3 +93,4 @@ if (generated === REAL_SECRET) {
 } else {
   console.log("--> ❌ 闭环验证失败！");
 }
+

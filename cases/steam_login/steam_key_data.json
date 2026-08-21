@@ -8,10 +8,8 @@
   "key_bits": 2048,
   "algorithm": "RSA-2048 / PKCS#1 v1.5",
   "key_rotation": "publickey_mod 与 timestamp 每次会话/每次请求都会变化, 本值仅用于当次复现验证",
-  "live_encrypted_password": "<已脱敏: 密文样本已删除>==",
-  "live_encrypted_for_password": "<已脱敏: 测试密码请自行指定>",
+  "_note_credentials": "明文密码与密文样本已删除（敏感数据不入库）。如需复现：运行 steam_decode_key.py 重新解码监听器捕获的请求，自动生成本文件。",
   "live_encrypted_via": "页面内 RSA.getPublicKey(real_mod, real_exp) + RSA.encrypt(pw, pub), 经 MCP ch_page_run_js 调用, 由 Steam 自己的 rsa.js 计算",
-  "live_encrypted_ct_len": 344,
   "verification": {
     "page_encrypt_decrypt_loop": "RSA-1024 自生成密钥对: 页面 RSA.encrypt 加密 -> 标准 PKCS#1 v1.5 私钥解密 -> match=true (decryptedPlain==plaintext)",
     "conclusion": "Steam 页面 RSA.encrypt == 标准 RSA PKCS#1 v1.5 == 本地复现脚本(steam_login_repro.py / steam_login.py); 代入真实公钥即得 Steam 服务端可解密的 encrypted_password"
